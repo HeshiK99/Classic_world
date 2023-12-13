@@ -1,9 +1,10 @@
 @extends('Backend.Layout.app')
 @section('content')
 <div id="content" class="main-content">
-    <div class="container">
-        <div class="container">
-            <div class="row">
+    <!-- <div class="container">
+        <div class="container"> -->
+        <div class="layout-px-spacing">
+        <div class="row layout-top-spacing">
 
                 <div class="col-lg-12 col-12 layout-spacing">
                     <div class="statbox widget box box-shadow">
@@ -39,8 +40,10 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+</div>
+        <!-- </div>
+    </div> -->
+
 </div>
 <div id="content" class="main-content">
             <div class="layout-px-spacing">
@@ -52,10 +55,11 @@
                                 <table id="example" class="table table-hover" style="width:100%">
                                     <thead>
                                         <tr>
+                                            <th>ID</th>
                                             <th>Name</th>
-                                            <th>Age</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
+                                            <th>Created_Date</th>
+                                            <th>Active</th>
+                                            <th>Brand</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -63,6 +67,23 @@
                                             <td>Tiger Nixon</td>
                                             <td><input type="text" id="row-1-age" class="form-control" name="row-1-age" value="61"></td>
                                             <td><input type="text" id="row-1-position" class="form-control" name="row-1-position" value="System Architect"></td>
+                                            <td><select size="1" id="row-1-office" class="form-control" name="row-1-office">
+                                                <option value="Edinburgh" selected="selected">
+                                                    Edinburgh
+                                                </option>
+                                                <option value="London">
+                                                    London
+                                                </option>
+                                                <option value="New York">
+                                                    New York
+                                                </option>
+                                                <option value="San Francisco">
+                                                    San Francisco
+                                                </option>
+                                                <option value="Tokyo">
+                                                    Tokyo
+                                                </option>
+                                            </select></td>
                                             <td><select size="1" id="row-1-office" class="form-control" name="row-1-office">
                                                 <option value="Edinburgh" selected="selected">
                                                     Edinburgh
@@ -688,6 +709,7 @@
         });
     </script>
     <script src="{{asset('backend/assets/js/custom.js')}}"></script>
+    <script src="{{asset('js/pages/backend_category.js')}}"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
     <!-- BEGIN PAGE LEVEL CUSTOM SCRIPTS -->
     <script src="{{asset('backend/plugins/table/datatable/datatables.js')}}"></script>
@@ -721,7 +743,7 @@
             } );
         }         
         /* Initialise the table with the required column ordering data types */
-        $(document).ready(function() {
+        // $(document).ready(function() {
             $('#example').DataTable( {
                 "columns": [
                     null,
@@ -740,7 +762,7 @@
                 "lengthMenu": [7, 10, 20, 50],
                 "pageLength": 7 
             } );
-        } );
+        // } );
     </script>
     <!-- END PAGE LEVEL CUSTOM SCRIPTS -->
 </body>

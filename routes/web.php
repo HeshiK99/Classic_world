@@ -32,9 +32,9 @@ Route::get('dashboard', function () {
 Route::get('checkout', function () {
     return view('Frontend.checkout');
 })->name('checkout');
-Route::get('brands', function () {
-    return view('Backend.brands');
-})->name('brands');
+Route::get('brands',[App\Http\Controllers\BrandsController::class,'index'])->name('brands');
+Route::get('category',[App\Http\Controllers\CategoriesController::class,'index'])->name('categories');
+Route::get('product',[App\Http\Controllers\ProductController::class,'index'])->name('product');
 Route::get('sales', function () {
     return view('Backend.sales');
 })->name('sales');
@@ -44,12 +44,8 @@ Route::get('orders', function () {
 Route::get('stock', function () {
     return view('Backend.stock');
 })->name('stock');
-Route::get('products', function () {
-    return view('Backend.products');
-})->name('products');
-Route::get('categories', function () {
-    return view('Backend.categories');
-})->name('categories');
+
+
 Route::get('sales-reports', function () {
     return view('Backend.sales-reports');
 })->name('sales-reports');
