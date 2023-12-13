@@ -32,9 +32,9 @@ Route::get('dashboard', function () {
 Route::get('checkout', function () {
     return view('Frontend.checkout');
 })->name('checkout');
-Route::get('models', function () {
-    return view('Backend.models');
-})->name('models');
+Route::get('brands', function () {
+    return view('Backend.brands');
+})->name('brands');
 Route::get('sales', function () {
     return view('Backend.sales');
 })->name('sales');

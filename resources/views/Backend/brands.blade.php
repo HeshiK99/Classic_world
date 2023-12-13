@@ -10,7 +10,7 @@
                         <div class="widget-header">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Add Categories</h4>
+                                    <h4>Add Brand</h4>
                                 </div>
                             </div>
                         </div>
@@ -18,31 +18,23 @@
                             <form>
                                 <div class="row mb-4">
                                     <div class="col">
-                                        <select class="form-control  basic" >
-                                            
-                                            <option selected="selected">Select Brand</option>
-                                            <option>Dr.Rashel</option>
-                                            <option>CeraVe</option>
-                                            <option>Ordinary</option>
-                                        </select>
+                                        <input type="text" class="form-control" placeholder="Brand Name" id="brandname" name="brandname">
                                     </div>
-
-                                    <div class="col">
-                                        <input type="text" class="form-control" placeholder="Categories" id="Categories" name="Categories">
-                                    </div>
-
+                                    <!-- <div class="col">
+                                        <input type="text" class="form-control" placeholder="Last name">
+                                    </div> -->
                                 </div>
                                 <input type="submit" name="time" class="btn btn-primary">
                             </form>
-                        </div>
+                         </div>
 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div id="content" class="main-content">
+    <div id="content" class="main-content">
             <div class="layout-px-spacing">
                 
                 <div class="row layout-top-spacing" id="cancel-row">
@@ -671,27 +663,12 @@
                 </div>
         
         <!--  END CONTENT AREA  -->
+</div>
 
-    
-    <!-- END MAIN CONTAINER -->
-    
-    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-    <script src="{{asset('backend/assets/js/libs/jquery-3.1.1.min.js')}}"></script>
-    <script src="{{asset('backend/bootstrap/js/popper.min.js')}}"></script>
-    <script src="{{asset('backend/bootstrap/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('backend/plugins/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
-    <script src="{{asset('backend/assets/js/app.js')}}"></script>
-    
+
+<!-- BEGIN PAGE LEVEL CUSTOM SCRIPTS -->
+<script src="{{asset('backend/plugins/table/datatable/datatables.js')}}"></script>
     <script>
-        $(document).ready(function() {
-            App.init();
-        });
-    </script>
-    <script src="{{asset('backend/assets/js/custom.js')}}"></script>
-    <!-- END GLOBAL MANDATORY SCRIPTS -->
-    <!-- BEGIN PAGE LEVEL CUSTOM SCRIPTS -->
-    <script src="{{asset('backend/plugins/table/datatable/datatables.js')}}"></script>
-    <script>        
         /* Create an array with the values of all the input boxes in a column */
         $.fn.dataTable.ext.order['dom-text'] = function  ( settings, col )
         {
@@ -699,7 +676,6 @@
                 return $('input', td).val();
             } );
         }         
-        /* Create an array with the values of all the input boxes in a column, parsed as numbers */
         $.fn.dataTable.ext.order['dom-text-numeric'] = function  ( settings, col )
         {
             return this.api().column( col, {order:'index'} ).nodes().map( function ( td, i ) {
@@ -743,10 +719,5 @@
         } );
     </script>
     <!-- END PAGE LEVEL CUSTOM SCRIPTS -->
-</body>
 
-<!-- Mirrored from designreset.com/cork/ltr/demo13/table_dt_live_dom_ordering.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Sep 2022 16:39:48 GMT -->
-</html>
-</div>
-@stop
-
+    @stop

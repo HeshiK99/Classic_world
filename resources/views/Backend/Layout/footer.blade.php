@@ -26,15 +26,21 @@
         });
     </script>
     <script src="{{ asset('backend/assets/js/custom.js') }}"></script>
+    <script src="{{asset('backend/assets/js/apps/invoice.js')}}"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
+
+
+    <script src="{{asset('backend/assets/js/elements/custom-search.js')}}"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     <script src="{{ asset('backend/plugins/apex/apexcharts.min.js') }}"></script>
     <script src="{{ asset('backend/assets/js/dashboard/dash_1.js') }}"></script>
     <script src="{{ asset('backend/assets/js/loader.js') }}"></script>
-    <script src="{{asset('backend/assets/js/scrollspyNav.js')}}"></script>
+    <<script src="{{asset('backend/assets/js/scrollspyNav.js')}}"></script> 
    
    
     <script src="{{asset('backend/plugins/highlight/highlight.pack.js')}}"></script>
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+    <!-- BEGIN PAGE LEVEL CUSTOM SCRIPTS -->
+
