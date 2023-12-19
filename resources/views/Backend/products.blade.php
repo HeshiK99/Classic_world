@@ -15,28 +15,27 @@
                         </div>
                     </div>
                     <div class="widget-content widget-content-area">
-                        <form>
+                        <form action ="{{route('product.store')}}" method="post" id="product-form">
+                            @csrf
                             <div class="row mb-4">
                                 <div class="col">
-                                    <select class="form-control  basic">
-
-                                        <option selected="selected">Select Categories</option>
-                                        <option>Dr.Rashel</option>
-                                        <option>CeraVe</option>
-                                        <option>Ordinary</option>
+                                <select class="form-control basic" id="brand-id">
+                                        @foreach ($categories as $single_category)
+                                        <option value="{{$single_category->id}}">{{$single_category->name}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
 
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="Product Name" id="ProductName" name="ProductName">
+                                    <input type="text" class="form-control" placeholder="Product Name" id="product-name" name="productname">
                                 </div>
                             </div>
                             <div class="row mb-4">
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="Price" id="Price" name="Price">
+                                    <input type="text" class="form-control" placeholder="Price" id="Price" name="productprice">
                                 </div>
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="Quantity" id="Quantity" name="Quantity">
+                                    <input type="text" class="form-control" placeholder="Quantity" id="Quantity" name="productquantity">
                                 </div>
                             </div>
                             <input type="submit" name="time" class="btn btn-primary">

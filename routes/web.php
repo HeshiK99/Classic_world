@@ -37,6 +37,7 @@ Route::post('brands-store',[App\Http\Controllers\BrandsController::class,'store'
 Route::get('category',[App\Http\Controllers\CategoriesController::class,'index'])->name('categories');
 Route::post('categories-store',[App\Http\Controllers\CategoriesController::class,'store'])->name('categories.store');
 Route::get('product',[App\Http\Controllers\ProductController::class,'index'])->name('product');
+Route::post('product-store',[App\Http\Controllers\ProductController::class,'index'])->name('product.store');
 Route::get('sales', function () {
     return view('Backend.sales');
 })->name('sales');
