@@ -33,11 +33,13 @@ Route::get('checkout', function () {
     return view('Frontend.checkout');
 })->name('checkout');
 Route::get('brands',[App\Http\Controllers\BrandsController::class,'index'])->name('brands');
+Route::post('brands-store',[App\Http\Controllers\BrandsController::class,'store'])->name('brands.store');
 Route::get('category',[App\Http\Controllers\CategoriesController::class,'index'])->name('categories');
 Route::get('product',[App\Http\Controllers\ProductController::class,'index'])->name('product');
 Route::get('sales', function () {
     return view('Backend.sales');
 })->name('sales');
+
 Route::get('orders', function () {
     return view('Backend.orders');
 })->name('orders');

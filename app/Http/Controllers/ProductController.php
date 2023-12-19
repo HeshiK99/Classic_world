@@ -9,9 +9,10 @@ class ProductController extends Controller
 
     {public function index()
         {
-           $product=Product::where('delete',0)->get();
-           dd($product);
+           $product=Product::where('deleted',0)->get();
+           return view('Backend.products',compact('product'));
            
        }
        }
 
+      

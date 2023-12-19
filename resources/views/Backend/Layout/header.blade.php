@@ -251,7 +251,7 @@
                                 <a href="{{route('categories')}}"> Categories </a>
                             </li>
                             <li>
-                                <a href="{{route('products')}}"> Products </a>
+                                <a href="{{route('product')}}"> Products </a>
                             </li>
                             <!-- <li>
                                 <a href="apps_notes.html">Notes</a>
