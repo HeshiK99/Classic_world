@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('backend/plugins/table/datatable/datatables.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('backend/plugins/table/datatable/custom_dt_html5.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('backend/plugins/table/datatable/dt-global_style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('backend/plugins/file-upload/file-upload-with-preview.min.css')}}"/>
     <!-- END PAGE LEVEL CUSTOM STYLES -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js">
 

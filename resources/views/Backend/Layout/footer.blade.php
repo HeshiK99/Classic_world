@@ -20,6 +20,7 @@
     <script src="{{ asset('backend/bootstrap/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('backend/plugins/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
+    <script src="{{ asset('backend/plugins/blockui/jquery.blockUI.min.js') }}"></script>
     <script>
         $(document).ready(function() {
             App.init();
@@ -40,6 +41,8 @@
    
    
     <script src="{{asset('backend/plugins/highlight/highlight.pack.js')}}"></script>
+
+    <script src="{{asset('backend/plugins/file-upload/file-upload-with-preview.min.js')}}"></script>
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     <!-- BEGIN PAGE LEVEL CUSTOM SCRIPTS -->

@@ -13,43 +13,59 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+/* FRONTEND ROUTES */
 Route::get('/', function () {
     return view('Frontend.home');
-})->name('home');
+})->name('frontend.home');
 Route::get('/shop', function () {
     return view('Frontend.shop');
-})->name('shop');
+})->name('frontend.shop');
 Route::get('/about-us', function () {
     return view('Frontend.about-us');
-})->name('about-us');
+})->name('frontend.about-us');
 Route::get('/contact-us', function () {
     return view('Frontend.contact-us');
-})->name('contact-us');
-
-Route::get('dashboard', function () {
-    return view('Backend.dashboard');
-})->name('dashboard');
-Route::get('checkout', function () {
+})->name('frontend.contact-us');
+Route::get('/checkout', function () {
     return view('Frontend.checkout');
-})->name('checkout');
-Route::get('brands',[App\Http\Controllers\BrandsController::class,'index'])->name('brands');
-Route::post('brands-store',[App\Http\Controllers\BrandsController::class,'store'])->name('brands.store');
-Route::get('category',[App\Http\Controllers\CategoriesController::class,'index'])->name('categories');
-Route::post('categories-store',[App\Http\Controllers\CategoriesController::class,'store'])->name('categories.store');
-Route::get('product',[App\Http\Controllers\ProductController::class,'index'])->name('product');
-Route::post('product-store',[App\Http\Controllers\ProductController::class,'index'])->name('product.store');
-Route::get('sales', function () {
-    return view('Backend.sales');
-})->name('sales');
-
-Route::get('orders', function () {
-    return view('Backend.orders');
-})->name('orders');
-Route::get('stock', function () {
-    return view('Backend.stock');
-})->name('stock');
+})->name('frontend.checkout');
 
 
-Route::get('sales-reports', function () {
-    return view('Backend.sales-reports');
-})->name('sales-reports');
+/* BACKEND ROUTES */
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+// Route::get('dashboard', function () {
+//     return view('Backend.dashboard');
+// })->name('dashboard');
+
+Route::group(
+    ['middleware' => 'auth'],
+    function ($router) {
+
+        Route::get('brands',[App\Http\Controllers\BrandsController::class,'index'])->name('brands');
+        Route::post('brands-store',[App\Http\Controllers\BrandsController::class,'store'])->name('brands.store');
+        Route::get('category',[App\Http\Controllers\CategoriesController::class,'index'])->name('categories');
+        Route::post('categories-store',[App\Http\Controllers\CategoriesController::class,'store'])->name('categories.store');
+        Route::get('product',[App\Http\Controllers\ProductController::class,'index'])->name('product');
+        Route::post('product-store',[App\Http\Controllers\ProductController::class,'index'])->name('product.store');
+        Route::get('sales', function () {
+            return view('Backend.sales');
+        })->name('sales');
+
+        Route::get('orders', function () {
+            return view('Backend.orders');
+        })->name('orders');
+        Route::get('stock', function () {
+            return view('Backend.stock');
+        })->name('stock');
+
+
+        Route::get('sales-reports', function () {
+            return view('Backend.sales-reports');
+        })->name('sales-reports');
+    }
+);

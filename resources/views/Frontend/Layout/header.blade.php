@@ -36,8 +36,8 @@
                             <i class="first-icon fa fa-user-circle"></i> My Account <i class="ion-ios-arrow-down"></i>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a href="{{route('dashboard')}}">My Account</a></li>
-                            <li><a href="{{route('checkout')}}">Checkout</a></li>
+                            <li><a href="{{route('home')}}">My Account</a></li>
+                            <li><a href="{{route('frontend.checkout')}}">Checkout</a></li>
                             <li><a href="register.html">Sign in</a></li>
                         </ul>
                     </div>
@@ -375,10 +375,10 @@
                                         <li><a href="index-6.html">Home Shop 6</a></li>
                                     </ul -->
                                 
-                                <li><a href="{{route('shop')}}">Shop</a></li>
+                                <li><a href="{{route('frontend.shop')}}">Shop</a></li>
                                 <!--li><a href="blog.html">Blog</a></li-->
-                                <li><a href="{{route('about-us')}}">About Us</a></li>
-                                <li><a href="{{route('contact-us')}}">Contact</a></li>
+                                <li><a href="{{route('frontend.about-us')}}">About Us</a></li>
+                                <li><a href="{{route('frontend.contact-us')}}">Contact</a></li>
                                 <!--li><a href="#">Features <i class="fa fa-angle-down"></a></i>
                                     <ul class="megamenu-3-column">
                                         <li><a href="#">Pages</a>
@@ -447,7 +447,7 @@
                 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne"><i class="first-icon fa fa-user-circle"></i> My Account</button>
                 <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <ul class="offcanvas-meta">
-                        <li><a href="{{route('dashboard')}}">My Account</a></li>
+                        <li><a href="{{route('home')}}">My Account</a></li>
                         <li><a href="checkout.html">Checkout</a></li>
                         <li><a href="register.html">Sign in</a></li>
                     </ul>
