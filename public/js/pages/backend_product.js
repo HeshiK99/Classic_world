@@ -1,24 +1,11 @@
 $(document).ready(function () {
-    $.ajax({
-        type: 'GET',
-        url: url,
-        success: function (response) {
-            //Handle the successful response here 
-            console.log('GET Request Successful:', response);
-        },
-        error: function (error) {
-            //handle errors here
-            console.log('Error in GET Request:', response);
-        }
-    });
-});
-$(document).ready(function () {
     $('#products-form').on('submit', function (event) {
         event.preventDefault();
         var productname = $('#product-name').val();
         var categoryId = $('#category-id').val();
-        var productprice =$('#product-price').val();
-        var productquantity =$('product-quantity').val();
+        var productprice = $('#product-price').val();
+        var productquantity = $('#product-quantity').val();
+
         $.ajax(
             {
                 url: 'product-store',
