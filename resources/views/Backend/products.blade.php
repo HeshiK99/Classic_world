@@ -90,16 +90,16 @@
                                     <td><input type="text" id="productprice" class="form-control" name="productprice"
                                             value="{{$single_product->price}}"></td>
                                     <td><input type="text" id="productquantoty" class="form-control"
-                                            name="productquantity" value="{{$single_product->qauntity}}"></td>
+                                            name="productquantity" value="{{$single_product->quantity}}"></td>
                                 </tr>
                                 @endforeach
                             </tbody>
                             <tfoot>
                                 <tr>
+                                    <th>Categories</th>
                                     <th>Name</th>
-                                    <th>Age</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
                                 </tr>
                             </tfoot>
                         </table>
