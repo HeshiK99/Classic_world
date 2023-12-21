@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,25 +13,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-/* FRONTEND ROUTES */
-Route::get('/', function () {
-    return view('Frontend.home');
-})->name('frontend.home');
-Route::get('/shop', function () {
-    return view('Frontend.shop');
-})->name('frontend.shop');
-Route::get('/about-us', function () {
-    return view('Frontend.about-us');
-})->name('frontend.about-us');
-Route::get('/contact-us', function () {
-    return view('Frontend.contact-us');
-})->name('frontend.contact-us');
-Route::get('/checkout', function () {
-    return view('Frontend.checkout');
-})->name('frontend.checkout');
-
 
 /* BACKEND ROUTES */
 Auth::routes();
@@ -68,3 +50,18 @@ Route::group(
         })->name('sales-reports');
     }
 );
+
+/* FRONTEND ROUTES */
+Route::get('/',[App\Http\Controllers\Frontend\HomeController::class,'index'])->name('frontend.home');
+Route::get('/shop', function () {
+    return view('Frontend.shop');
+})->name('frontend.shop');
+Route::get('/about-us', function () {
+    return view('Frontend.about-us');
+})->name('frontend.about-us');
+Route::get('/contact-us', function () {
+    return view('Frontend.contact-us');
+})->name('frontend.contact-us');
+Route::get('/checkout', function () {
+    return view('Frontend.checkout');
+})->name('frontend.checkout');

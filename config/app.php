@@ -208,8 +208,8 @@ return [
     |
     */
 
-    'aliases' => Facade::defaultAliases()->merge([
-        // 'ExampleClass' => App\Example\ExampleClass::class,
-    ])->toArray(),
+    'aliases' => [
+        'HeaderHelper' =>  App\Helpers\HeaderHelper::class,
+    ],
 
 ];
