@@ -36,6 +36,12 @@ class StockController extends Controller
             $stock_item['stock_id'] = $result->id;
 
             $result2 = StockItems::create($stock_item);
+
+            $product_details = Product::where('id', $single_item['product'])->first();
+
+            Product::where('id', $single_item['product'])->update([
+                'quantity' => $product_details['quantity'] + $single_item['quantity']
+            ]);
         }
 
         if($result && $result2)
