@@ -10,7 +10,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $product=Product::where('deleted',0)->get();
+        $product = Product::where('deleted',0)->get();
         $categories = Categories::where('deleted', 0)->get();
         return view('Backend.products',compact('product','categories'));
         

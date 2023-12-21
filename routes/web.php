@@ -59,9 +59,8 @@ Route::group(
         Route::get('orders', function () {
             return view('Backend.orders');
         })->name('orders');
-        Route::get('stock', function () {
-            return view('Backend.stock');
-        })->name('stock');
+        Route::get('stock',[App\Http\Controllers\StockController::class,'index'])->name('stock');
+        Route::post('stock-store',[App\Http\Controllers\StockController::class,'store'])->name('stock.store');
 
 
         Route::get('sales-reports', function () {
