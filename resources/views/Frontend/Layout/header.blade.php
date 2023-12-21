@@ -38,7 +38,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="{{route('home')}}">My Account</a></li>
                             <li><a href="{{route('frontend.checkout')}}">Checkout</a></li>
-                            <li><a href="register.html">Sign in</a></li>
+                            <li><a href="{{route('register')}}">Sign in</a></li>
                         </ul>
                     </div>
                     <!-- currency-menu -->

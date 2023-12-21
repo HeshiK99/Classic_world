@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Categories;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -22,14 +24,21 @@ class ProductController extends Controller
             'name'=> 'required|string|max:255',
             'category_id'=> 'required|int',
             'price'=>'required|int',
-            'quantity'=>'required|int'
-
+            'quantity'=>'required|int',
+            'fileInput' => 'required',
         ]);
+
+        $imageData = $request->fileInput;
+        $data = substr($imageData, strpos($imageData, ',') + 1);
+        $data = base64_decode($data);
+        $fileName = Carbon::now()->timestamp . '_' . uniqid() . '.' . explode('/', explode(':', substr($imageData, 0, strpos($imageData, ';')))[1])[1];
+        Storage::disk('public')->put("/products/" . $fileName , $data);
 
         $product['name'] = $request->name;
         $product['category_id'] = $request->category_id;
         $product['price'] = $request->price;
         $product['quantity'] = $request->quantity;
+        $product['image'] = $fileName;
 
         $result = Product::create($product);
 
