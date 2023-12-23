@@ -39,6 +39,9 @@ Route::group(
         Route::post('/add-to-cart',[App\Http\Controllers\Frontend\CartController::class,'addToCart']);
         Route::post('/remove-from-cart',[App\Http\Controllers\Frontend\CartController::class,'removeCart']);
 
+        Route::get('/checkout',[App\Http\Controllers\Frontend\CheckoutController::class,'index'])->name('frontend.checkout');
+        Route::post('/order-checkout',[App\Http\Controllers\Frontend\CheckoutController::class,'orderCheckout']);
+
 
         Route::get('sales', function () {
             return view('Backend.sales');
@@ -73,6 +76,3 @@ Route::get('/about-us', function () {
 Route::get('/contact-us', function () {
     return view('Frontend.contact-us');
 })->name('frontend.contact-us');
-Route::get('/checkout', function () {
-    return view('Frontend.checkout');
-})->name('frontend.checkout');
