@@ -4,6 +4,8 @@
     <title>Harosa || Home 4</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{csrf_token()}}">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.webp">
