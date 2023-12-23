@@ -210,6 +210,7 @@ return [
 
     'aliases' => [
         'HeaderHelper' =>  App\Helpers\HeaderHelper::class,
+        'ProductHelper' =>  App\Helpers\ProductHelper::class,
     ],
 
 ];

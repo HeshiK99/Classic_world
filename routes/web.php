@@ -34,6 +34,12 @@ Route::group(
         Route::post('categories-store',[App\Http\Controllers\CategoriesController::class,'store'])->name('categories.store');
         Route::get('product',[App\Http\Controllers\ProductController::class,'index'])->name('product');
         Route::post('product-store',[App\Http\Controllers\ProductController::class,'store'])->name('product.store');
+
+        Route::get('/cart',[App\Http\Controllers\Frontend\CartController::class,'index'])->name('frontend.cart');
+        Route::post('/add-to-cart',[App\Http\Controllers\Frontend\CartController::class,'addToCart']);
+        Route::post('/remove-from-cart',[App\Http\Controllers\Frontend\CartController::class,'removeCart']);
+
+
         Route::get('sales', function () {
             return view('Backend.sales');
         })->name('sales');
@@ -53,9 +59,14 @@ Route::group(
 
 /* FRONTEND ROUTES */
 Route::get('/',[App\Http\Controllers\Frontend\HomeController::class,'index'])->name('frontend.home');
-Route::get('/shop', function () {
-    return view('Frontend.shop');
-})->name('frontend.shop');
+Route::get('/shop',[App\Http\Controllers\Frontend\ShopController::class,'index'])->name('frontend.shop');
+Route::get('/shop/filter-price/{min_value}/{max_value}',[App\Http\Controllers\Frontend\ShopController::class,'filterByPrice']);
+Route::get('/shop/filter/{criteria}',[App\Http\Controllers\Frontend\ShopController::class,'filterByCriteria']);
+Route::get('/product-detail/{product_id}',[App\Http\Controllers\Frontend\ProductController::class,'index'])->name('frontend.product');
+
+
+Route::post('/update-route-session',[App\Http\Controllers\Frontend\SessionController::class,'routeUpdate']);
+
 Route::get('/about-us', function () {
     return view('Frontend.about-us');
 })->name('frontend.about-us');

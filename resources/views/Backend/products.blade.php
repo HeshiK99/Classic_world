@@ -1,5 +1,22 @@
 @extends('Backend.Layout.app')
 @section('content')
+
+<style>
+#preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.preview-image {
+    max-width: 150px;
+    /* Set the desired max-width */
+    max-height: 150px;
+    /* Set the desired max-height */
+    margin: 0 10px 10px 0;
+}
+</style>
+
 <div id="content" class="main-content">
     <!--div class="container">
         <div class="container"-->
@@ -41,6 +58,12 @@
                                 name="product-quantity">
                         </div>
                     </div>
+                    <div class="row mb-4">
+                        <div class="col">
+                            <input type="file" name="fileInput" id="fileInput" accept=".jpg, .jpeg, .png, .webp">
+                            <div id="preview-container" style="width: 50%; height: 50%;"></div>
+                        </div>
+                    </div>
                     <input type="submit" name="time" class="btn btn-primary">
                 </form>
             </div>
@@ -75,12 +98,12 @@
                                 @foreach ($product as $single_product)
                                 <tr>
                                     <td><select size="1" id="row-1-office" class="form-control" name="row-1-office">
-                                            <option value="Edinburgh" selected="selected">
-                                                Edinburgh
+                                            @foreach ($categories as $single_category)
+                                            <option value="{{$single_category->id}}" @if($single_product->category_id ==
+                                                $single_category->id) selected="selected" @endif>
+                                                {{$single_category->name}}
                                             </option>
-                                            <option value="London">
-                                                London
-                                            </option>
+                                            @endforeach
 
                                         </select></td>
 
@@ -117,70 +140,29 @@
 <!-- BEGIN PAGE LEVEL CUSTOM SCRIPTS -->
 <script src="{{asset('backend/plugins/table/datatable/datatables.js')}}"></script>
 <script src="{{asset('js/pages/backend_product.js')}}"></script>
-<script>
-/* Create an array with the values of all the input boxes in a column */
-$.fn.dataTable.ext.order['dom-text'] = function(settings, col) {
-    return this.api().column(col, {
-        order: 'index'
-    }).nodes().map(function(td, i) {
-        return $('input', td).val();
-    });
-}
-$.fn.dataTable.ext.order['dom-text-numeric'] = function(settings, col) {
-    return this.api().column(col, {
-        order: 'index'
-    }).nodes().map(function(td, i) {
-        return $('input', td).val() * 1;
-    });
-}
-/* Create an array with the values of all the select options in a column */
-$.fn.dataTable.ext.order['dom-select'] = function(settings, col) {
-    return this.api().column(col, {
-        order: 'index'
-    }).nodes().map(function(td, i) {
-        return $('select', td).val();
-    });
-}
-/* Create an array with the values of all the checkboxes in a column */
-$.fn.dataTable.ext.order['dom-checkbox'] = function(settings, col) {
-    return this.api().column(col, {
-        order: 'index'
-    }).nodes().map(function(td, i) {
-        return $('input', td).prop('checked') ? '1' : '0';
-    });
-}
-/* Initialise the table with the required column ordering data types */
-// $(document).ready(function() {
-$('#example').DataTable({
-    "columns": [
-        null,
-        {
-            "orderDataType": "dom-text-numeric"
-        },
-        {
-            "orderDataType": "dom-text",
-            type: 'string'
-        },
-        {
-            "orderDataType": "dom-select"
-        }
-    ],
-    "oLanguage": {
-        "oPaginate": {
-            "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>',
-            "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>'
-        },
-        "sInfo": "Showing page _PAGE_ of _PAGES_",
-        "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
-        "sSearchPlaceholder": "Search...",
-        "sLengthMenu": "Results :  _MENU_",
-    },
-    "stripeClasses": [],
-    "lengthMenu": [7, 10, 20, 50],
-    "pageLength": 7
-});
-// } );
-</script>
-<!-- END PAGE LEVEL CUSTOM SCRIPTS -->
 
+<script>
+document.getElementById('fileInput').addEventListener('change', handleFileSelect);
+
+function handleFileSelect(event) {
+    const files = event.target.files;
+    const previewContainer = document.getElementById('preview-container');
+    previewContainer.innerHTML = '';
+
+    for (const file of files) {
+        if (file.type.startsWith('image/')) {
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                const previewImage = document.createElement('img');
+                previewImage.className = 'preview-image';
+                previewImage.src = e.target.result;
+                previewContainer.appendChild(previewImage);
+            };
+
+            reader.readAsDataURL(file);
+        }
+    }
+}
+</script>
 @stop

@@ -32,13 +32,19 @@
                 <div class="topbar-nav">
                     <!-- my account -->
                     <div class="dropdown menu-my-account-container">
+                        @if(isset(auth()->user()->id))
+                        <button data-bs-toggle="dropdown">
+                            <i class="first-icon fa fa-user-circle"></i> {{ auth()->user()->name }} <i class="ion-ios-arrow-down"></i>
+                        </button>
+                        @else
                         <button data-bs-toggle="dropdown">
                             <i class="first-icon fa fa-user-circle"></i> My Account <i class="ion-ios-arrow-down"></i>
                         </button>
+                        @endif
                         <ul class="dropdown-menu">
                             <li><a href="{{route('home')}}">My Account</a></li>
                             <li><a href="{{route('frontend.checkout')}}">Checkout</a></li>
-                            <li><a href="register.html">Sign in</a></li>
+                            <li><a href="{{route('register')}}">Sign in</a></li>
                         </ul>
                     </div>
                     <!-- currency-menu -->
@@ -101,46 +107,44 @@
                         <button class="cart-icon" data-bs-toggle="dropdown" >
                             <i class="fa fa-shopping-basket" ></i>
                             <span class="item_txt"> Cart</span>
-                            <span class="item_count">(2)</span>
-                            <span class="item_total">- $57.99</span>
+                            @if(isset(auth()->user()->id))
+                            <span class="item_count">({{ HeaderHelper::getCartItemCount() }})</span>
+                            <span class="item_total">- LKR {{ HeaderHelper::getCartTotal() }}</span>
+                            @else
+                            <span class="item_count">(0)</span>
+                            <span class="item_total">- LKR 0</span>
+                            @endif
                         </button>
                         <div class="header-cart dropdown-menu">
                             <ul>
+                                @if(isset(auth()->user()->id))
+                                @foreach(HeaderHelper::getCartItems() as $cart_item)
                                 <li>
-                                    <div class="img_content">
-                                        <img class="product-image img-responsive" src="assets/images/product/cat/cat1.webp" alt="" title="">
-                                        <span class="product-quantity">1x</span>
-                                    </div>
-                                    <div class="right_block">
-                                        <span class="product-name">Hummingbird printed t-shirt</span>
-                                        <span class="product-price">$21.99</span>
-                                        <a href="#" class="remove-from-cart"> <i class="fa fa-remove pull-xs-left"></i></a>
-                                        <div class="attributes_content">
-                                            <span><strong>Size</strong>: S</span><br>
-                                            <span><strong>Color</strong>: White</span><br>
+                                    <div class="row">
+                                        <div class="img_content col-md-6">
+                                            <img class="product-image img-responsive" src="{{ asset('storage/products/' . $cart_item->image) }}" alt="" title="">
+                                            <span class="product-quantity">{{ $cart_item->quantity }}x</span>
+                                        </div>
+                                        <div class="right_block col-md-6">
+                                            <span class="product-name">{{ $cart_item->name }}</span>
+                                            <span class="product-price">LKR {{ $cart_item->total }}</span>
+                                            <!-- <a href="#" class="remove-from-cart"> <i class="fa fa-remove pull-xs-left"></i></a> -->
+                                            <!-- <div class="attributes_content">
+                                                <span><strong>Size</strong>: S</span><br>
+                                                <span><strong>Color</strong>: White</span><br>
+                                            </div> -->
                                         </div>
                                     </div>
+                                    
                                 </li>
-                                <li>
-                                    <div class="img_content">
-                                        <img class="product-image img-responsive" src="assets/images/product/cat/cat2.webp" alt="" title="">
-                                        <span class="product-quantity">1x</span>
-                                    </div>
-                                    <div class="right_block">
-                                        <span class="product-name">The adventure begins Framed poster</span>
-                                        <span class="product-price">$29.00</span>
-                                        <a href="#" class="remove-from-cart"><i class="fa fa-remove pull-xs-left"></i></a>
-                                        <div class="attributes_content">
-                                            <span><strong>Dimension</strong>: 40x60cm</span><br>
-                                        </div>
-                                    </div>
-                                </li>
+                                @endforeach
+                                @endif
                             </ul>
                             <div class="price_content">
                                 <div class="cart-subtotals">
-                                    <div class="products price_inline">
+                                    <!-- <div class="products price_inline">
                                         <span class="label">Subtotal</span>
-                                        <span class="value">$50.99</span>
+                                        <span class="value">LKR {{ HeaderHelper::getCartTotal() }}</span>
                                     </div>
                                     <div class=" price_inline">
                                         <span class="label"></span>
@@ -153,16 +157,22 @@
                                     <div class="tax price_inline">
                                         <span class="label">Taxes</span>
                                         <span class="value">$0.00</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="cart-total price_inline">
                                     <span class="label">Total</span>
-                                    <span class="value">$57.99</span>
+                                    <span class="value">LKR {{ HeaderHelper::getCartTotal() }}</span>
                                 </div>
                             </div>
+                            @if(isset(auth()->user()->id))
                             <div class="checkout">
-                                <a href="checkout.html" class="btn btn-primary">checkout</a>
+                                <a href="{{ route('frontend.cart') }}" class="btn btn-primary">cart</a>
                             </div>
+                            @else
+                            <div class="checkout">
+                                <a href="/login" class="btn btn-primary">login to view</a>
+                            </div>
+                            @endif
                         </div>
                     </div>
 
@@ -208,7 +218,7 @@
                         <nav>
                             <ul>
                                 <li class="current">
-                                <li><a href="{{route('home')}}" >Home<!--i class="fa fa-angle-down"></i--></a></li>
+                                <li><a href="/" >Home<!--i class="fa fa-angle-down"></i--></a></li>
                                 
                                 <!-- ul class="submenu">
                                         <li><a href="index.html">Home Shop 1</a></li>
@@ -329,7 +339,7 @@
 
         <nav class="canvas-menu">
             <ul>
-                <li class="current"><a href="index.html">Home</a>
+                <li class="current"><a href="/">Home</a>
                     <ul class="sub-menu">
                         <li><a href="index.html">Home Shop 1</a></li>
                         <li><a href="index-2.html">Home Shop 2</a></li>
