@@ -35,3 +35,9 @@ $(document).ready(function () {
 
     });
 });
+
+$("#gotoprofile").on("click", function() {
+
+    window.location.href = "/profile";
+
+});

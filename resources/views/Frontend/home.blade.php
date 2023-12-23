@@ -126,17 +126,18 @@
                     <div class="item-product">
                         <div class="product-miniature js-product-miniature">
                             <div class="img_block">
-                                <a href="single-product.html" class="thumbnail product-thumbnail">
+                                <a href="/product-detail/{{$new_arrivals->id}}" class="thumbnail product-thumbnail">
                                     <img src="{{ asset('storage/products/' . $new_arrivals->image) }}"
                                         alt="harosa product">
                                 </a>
                                 <ul class="product-flag">
                                     <li class="new"><span>New</span></li>
                                 </ul>
-                                <!-- <div class="quick-view">
-                                            <a href="#" data-bs-toggle="modal" data-bs-target="#product_modal"  data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
-                                        </div> -->
-                                <div class="hook-reviews">
+                                <div class="quick-view">
+                                    <a href="/product-detail/{{$new_arrivals->id}}" data-original-title="Quick View"
+                                        class="quick_view"><i class="fa fa-search"></i></a>
+                                </div>
+                                <!-- <div class="hook-reviews">
                                     <div class="comments_note">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -144,7 +145,7 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- <div class="product-price-and-shipping_top">
                                             <span class="discount-percentage discount-product">-8%</span>
                                         </div> -->

@@ -51,4 +51,11 @@ class ShopController extends Controller
 
         return view('Frontend.shop', compact('products'));
     }
+
+    public function filterByCategory($category_id)
+    {
+        $products = Product::where('active', 1)->where('deleted', 0)->where('category_id', $category_id)->paginate(10);
+
+        return view('Frontend.shop', compact('products'));
+    }
 }

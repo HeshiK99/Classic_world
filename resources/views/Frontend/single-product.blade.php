@@ -26,7 +26,7 @@
                 <p class="product-id d-none">{{ $product_details['id'] }}</p>
                 <!-- <p class="reference">Reference: demo_1</p> -->
                 <div id="product_comments_block_extra" class="no-print">
-                    <div class="hook-reviews">
+                    <!-- <div class="hook-reviews">
                         <div class="comments_note">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -34,7 +34,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                         </div>
-                    </div>
+                    </div> -->
                     <ul class="comments_advices">
                         <li>
                             <a class="reviews _mPS2id-h show-reviews">Read reviews (<span>{{ count($reviews) }}</span>)</a>
@@ -104,8 +104,8 @@
             <ol class="commentlist">
                 <li>
                     <div class="single-comment">
-                        <div class="comment-avatar">
-                            <img src="assets/images/blog/road-avatar.webp" alt="comment image bege">
+                        <div class="comment-avatar" style="margin-right: -420px;">
+                            <img src="{{ asset('storage/users/' . UserHelper::getUserData($single_review['user_id'], 'image')) }}" width="20%" alt="comment image bege">
                         </div>
                         <div class="comment-info">
                             <a href="#">{{ UserHelper::getUserData($single_review['user_id'], 'name') }}</a>
