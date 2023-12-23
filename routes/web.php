@@ -34,6 +34,8 @@ Route::group(
         Route::post('categories-store',[App\Http\Controllers\CategoriesController::class,'store'])->name('categories.store');
         Route::get('product',[App\Http\Controllers\ProductController::class,'index'])->name('product');
         Route::post('product-store',[App\Http\Controllers\ProductController::class,'store'])->name('product.store');
+        Route::get('orders',[App\Http\Controllers\OrderController::class,'index'])->name('orders');
+        Route::post('/get-invoice-details',[App\Http\Controllers\OrderController::class,'getOrderDetails']);
 
         Route::get('/cart',[App\Http\Controllers\Frontend\CartController::class,'index'])->name('frontend.cart');
         Route::post('/add-to-cart',[App\Http\Controllers\Frontend\CartController::class,'addToCart']);
@@ -47,9 +49,6 @@ Route::group(
             return view('Backend.sales');
         })->name('sales');
 
-        Route::get('orders', function () {
-            return view('Backend.orders');
-        })->name('orders');
         Route::get('stock',[App\Http\Controllers\StockController::class,'index'])->name('stock');
         Route::post('stock-store',[App\Http\Controllers\StockController::class,'store'])->name('stock.store');
 

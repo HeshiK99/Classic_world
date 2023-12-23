@@ -32,6 +32,7 @@ class CheckoutController extends Controller
 
             foreach($cart_items as $item)
             {
+                $order_item['name'] = $item['name'];
                 $order_item['quantity'] = $item['quantity'];
                 $order_item['price'] = $item['total'];
                 $order_item['individual_price'] = $item['price'];
