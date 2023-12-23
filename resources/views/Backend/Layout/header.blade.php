@@ -20,7 +20,7 @@
 
             <div class="nav-logo align-self-center">
                 <a class="navbar-brand" href="index-2.html"><img alt="logo"
-                        src="{{asset('backend/assets/img/logo2.svg')}}"> <span class="navbar-brand-name">CORK</span></a>
+                        src="{{asset('images/logo/img1.jpg')}}"></a>
             </div>
 
             <ul class="navbar-item flex-row mr-auto">
@@ -175,7 +175,7 @@
                     <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="user-profile-dropdown"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="media">
-                            <img src="{{asset('backend/assets/img/profile-7.jpg')}}" class="img-fluid"
+                            <img src="{{ asset('storage/users/' . auth()->user()->image) }}" class="img-fluid"
                                 alt="admin-profile">
                             <div class="media-body align-self-center">
                                 <h6><span>Hi,</span> {{ auth()->user()->name }}</h6>
@@ -191,7 +191,7 @@
                         aria-labelledby="user-profile-dropdown">
                         <div class="">
                             <div class="dropdown-item">
-                                <a class="" href="user_profile.html"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                <a class="" href="{{ route('profile') }}"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                                         height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                         class="feather feather-user">
@@ -272,6 +272,7 @@
                         </ul>
                     </li> -->
 
+                    @if(auth()->user()->type == "admin")
                     <li class="menu single-menu">
                         <a href="#app" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                             <div class="">
@@ -392,6 +393,7 @@
                             </li>
                         </ul> -->
                     </li>
+                    @endif
 
 
                     <li class="menu single-menu">
@@ -517,6 +519,7 @@
                         </ul>
                     </li> -->
 
+                    @if(auth()->user()->type == "admin")
                     <li class="menu single-menu">
                         <a href="#forms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                             <div class="">
@@ -592,6 +595,7 @@
                             </li> -->
                         </ul>
                     </li>
+                    @endif
 
                     <!-- <li class="menu single-menu">
                         <a href="#page" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">

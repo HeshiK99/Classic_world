@@ -39,6 +39,7 @@ Route::group(
         Route::get('orders',[App\Http\Controllers\OrderController::class,'index'])->name('orders');
         Route::post('/get-invoice-details',[App\Http\Controllers\OrderController::class,'getOrderDetails']);
         Route::get('/sales-reports',[App\Http\Controllers\SalesReportController::class,'index'])->name('sales-reports');
+        Route::get('profile',[App\Http\Controllers\ProfileController::class,'index'])->name('profile');
 
 
         
@@ -57,6 +58,7 @@ Route::get('/',[App\Http\Controllers\Frontend\HomeController::class,'index'])->n
 Route::get('/shop',[App\Http\Controllers\Frontend\ShopController::class,'index'])->name('frontend.shop');
 Route::get('/shop/filter-price/{min_value}/{max_value}',[App\Http\Controllers\Frontend\ShopController::class,'filterByPrice']);
 Route::get('/shop/filter/{criteria}',[App\Http\Controllers\Frontend\ShopController::class,'filterByCriteria']);
+Route::get('/shop/filter-category/{category_id}',[App\Http\Controllers\Frontend\ShopController::class,'filterByCategory']);
 Route::get('/product-detail/{product_id}',[App\Http\Controllers\Frontend\ProductController::class,'index'])->name('frontend.product');
 
 

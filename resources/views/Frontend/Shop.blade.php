@@ -39,7 +39,7 @@
                                     <select class="nice-select-menu filter-dropdown orderby">
                                         <option value="/shop/filter/default" data-display="Select">Default sorting</option>
                                         <option value="/shop/filter/popularity">Sort by popularity</option>
-                                        <option value="/shop/filter/rating">Sort by average rating</option>
+                                        <!-- <option value="/shop/filter/rating">Sort by average rating</option> -->
                                         <option value="/shop/filter/newness">Sort by newness</option>
                                         <option value="/shop/filter/lowtohigh">Sort by price: low to high</option>
                                         <option value="/shop/filter/hightolow">Sort by price: high to low</option>
@@ -74,7 +74,7 @@
                                                     data-bs-target="#product_modal" data-original-title="Quick View"
                                                     class="quick_view"><i class="fa fa-search"></i></a>
                                             </div>
-                                            <div class="hook-reviews">
+                                            <!-- <div class="hook-reviews">
                                                 <div class="comments_note">
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
@@ -82,7 +82,7 @@
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <div class="product_desc">
                                             <h1> <a href="single-product.html" class="product_name"
@@ -122,11 +122,10 @@
                                             </ul>
                                             @endif
                                             <div class="quick-view">
-                                                <a href="/product-detail/{{$product->id}}" data-bs-toggle="modal"
-                                                    data-bs-target="#product_modal" data-original-title="Quick View"
+                                                <a href="/product-detail/{{$product->id}}" data-original-title="Quick View"
                                                     class="quick_view"><i class="fa fa-search"></i></a>
                                             </div>
-                                            <div class="hook-reviews">
+                                            <!-- <div class="hook-reviews">
                                                 <div class="comments_note">
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
@@ -134,7 +133,7 @@
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <div class="product_desc">
                                             <h1><a href="single-product.html" class="product_name"
@@ -237,7 +236,7 @@
                         </div>
                     </div> -->
                     <div class="advertising">
-                        <a href="shop.html"><img src="assets/images/banner/advertising.webp" alt="harosa images"></a>
+                        <a href="shop.html"><img src="{{ asset('assets/images/banner/advertising.webp') }}" alt="harosa images"></a>
                     </div>
                     <div class="shop-categori-page categori-mini-product-area">
                         <div class="pos-featured-products  product_block_container">

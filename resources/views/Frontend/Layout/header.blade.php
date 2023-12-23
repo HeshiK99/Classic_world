@@ -204,7 +204,7 @@
                                     $categories = HeaderHelper::getCategories();
                                 @endphp
                                 @foreach($categories as $category)
-                                <li><a href="shop.html">{{ $category->name }}</a>
+                                <li><a href="/shop/filter-category/{{ $category->id }}">{{ $category->name }}</a>
                                 </li>
                                 @endforeach
 

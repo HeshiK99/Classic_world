@@ -134,7 +134,7 @@
                                 </div>
 
                                 <!-- ACCORDION START -->
-                                <h3>Want to update profile details? <span id="gotoprofile">Click here to go to your profile</span></h3>
+                                <h3>Want to update profile details? <span id="gotoprofile" style="cursor: pointer;"><u>Click here to go to your profile</u></span></h3>
                                 <!-- ACCORDION END -->
                             </div>
                         </div>
