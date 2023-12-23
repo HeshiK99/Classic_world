@@ -302,8 +302,10 @@
                 <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <ul class="offcanvas-meta">
                         <li><a href="{{route('home')}}">My Account</a></li>
-                        <li><a href="checkout.html">Checkout</a></li>
-                        <li><a href="register.html">Sign in</a></li>
+                        <li><a href="{{route('frontend.checkout')}}">Checkout</a></li>
+                        @if(!isset(auth()->user()->id))
+                        <li><a href="{{ route('register') }}">Sign in</a></li>
+                        @endif
                     </ul>
                 </div>
             </div>

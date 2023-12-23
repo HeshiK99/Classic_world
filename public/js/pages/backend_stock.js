@@ -41,11 +41,24 @@ $("#stock-add").click(function (event) {
 
         },
         success: function (data) {
-            console.log("stock created successful");
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Stock Created",
+                showConfirmButton: false,
+                timer: 1500
+            });
             location.reload();
         },
         error: function (error) {
             console.error(error.reponseText);
+            Swal.fire({
+                position: "top-end",
+                icon: "error",
+                title: "Try Again",
+                showConfirmButton: false,
+                timer: 1500
+            });
         },
     });
 

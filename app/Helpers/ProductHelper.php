@@ -42,4 +42,11 @@ class ProductHelper
         $new_arrivals = Product::where('active', 1)->where('deleted', 0)->where('created_at', '>=', $tenDaysAgoFormatted)->limit($count)->get();
         return $new_arrivals;
     }
+
+    public static function changeDateFormat($date = null)
+    {
+        $dateTime = new DateTime($date);
+        $formattedDate = $dateTime->format("F j, Y \a\\t g:i a");
+        return $formattedDate;
+    }
 }

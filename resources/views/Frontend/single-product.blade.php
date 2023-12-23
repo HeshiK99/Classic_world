@@ -10,7 +10,8 @@
                     <div class="product-cover">
                         <div class="tab-content">
                             <div class="tab-pane active" id="red">
-                                <img src="{{ asset('storage/products/' . $product_details['image']) }}" alt="harosa single product">
+                                <img src="{{ asset('storage/products/' . $product_details['image']) }}"
+                                    alt="harosa single product">
                                 <div class="layer hidden-sm-down">
                                     <i class="material-icons zoom-in"></i>
                                 </div>
@@ -36,11 +37,13 @@
                     </div>
                     <ul class="comments_advices">
                         <li>
-                            <a href="#idTab5" class="reviews _mPS2id-h">Read reviews (<span>1</span>)</a>
+                            <a class="reviews _mPS2id-h show-reviews">Read reviews (<span>{{ count($reviews) }}</span>)</a>
                         </li>
+                        @if(isset(auth()->user()->id))
                         <li>
                             <a class="open-comment-form">Write a review</a>
                         </li>
+                        @endif
                     </ul>
                 </div>
                 <div class="product-prices">
@@ -64,11 +67,14 @@
                             <div class="product-add-to-cart">
                                 <span class="control-label">Quantity</span>
                                 <div class="box-quantity d-flex">
-                                    <input class="quantity mr-40" min="1" max="{{ $product_details['quantity'] }}" value="1" type="number">
+                                    <input class="quantity mr-40" min="1" max="{{ $product_details['quantity'] }}"
+                                        value="1" type="number">
                                     @if(!isset(auth()->user()->id))
-                                    <a class="login-add-cart" style="cursor: pointer;"><i class="fa fa-shopping-cart"></i> Login</a>
+                                    <a class="login-add-cart" style="cursor: pointer;"><i
+                                            class="fa fa-shopping-cart"></i> Login</a>
                                     @else
-                                    <a class="add-cart" style="cursor: pointer;"><i class="fa fa-shopping-cart"></i> add to
+                                    <a class="add-cart" style="cursor: pointer;"><i class="fa fa-shopping-cart"></i> add
+                                        to
                                         cart</a>
                                     @endif
                                 </div>
@@ -89,6 +95,52 @@
                         </form>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="comments-area">
+            @if(count($reviews) != 0)
+            <h3>{{ count($reviews) }} reviews</h3>
+            @foreach($reviews as $single_review)
+            <ol class="commentlist">
+                <li>
+                    <div class="single-comment">
+                        <div class="comment-avatar">
+                            <img src="assets/images/blog/road-avatar.webp" alt="comment image bege">
+                        </div>
+                        <div class="comment-info">
+                            <a href="#">{{ UserHelper::getUserData($single_review['user_id'], 'name') }}</a>
+                            <!-- <div class="reply">
+                                <a href="#">Reply</a>
+                            </div> -->
+                            <span class="date">{{ ProductHelper::changeDateFormat($single_review['created_at']) }}</span>
+                            <p>{{ $single_review['review'] }}</p>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            @endforeach
+            @endif
+            <div class="comment-respond">
+                <h3>Post a Review </h3>
+                @if(!isset(auth()->user()->id))
+                <small>You need to login first before posting a review *</small>
+                @endif
+                <form >
+                    <div class="text-filds">
+                        <label for="review">Review</label>
+                        <p class="review-product-id d-none">{{ $product_details['id'] }}</p>
+                        <textarea id="review" name="review" class="review" cols="45" rows="8" maxlength="65525" required="required"></textarea>
+                    </div>
+                    @if(isset(auth()->user()->id))
+                    <div class="review-submit">
+                        <input name="submit" type="submit" id="submit" class="submit" value="Post Review">
+                    </div>
+                    @else
+                    <div class="review-submit-login">
+                        <input name="submit" type="submit" id="submit" class="submit" value="Login">
+                    </div>
+                    @endif
+                </form>
             </div>
         </div>
     </div>
