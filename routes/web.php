@@ -47,11 +47,16 @@ Route::group(
         Route::post('/add-to-cart',[App\Http\Controllers\Frontend\CartController::class,'addToCart']);
         Route::post('/remove-from-cart',[App\Http\Controllers\Frontend\CartController::class,'removeCart']);
         Route::get('/checkout',[App\Http\Controllers\Frontend\CheckoutController::class,'index'])->name('frontend.checkout');
-        Route::post('/order-checkout',[App\Http\Controllers\Frontend\CheckoutController::class,'orderCheckout']);
+        Route::get('/order-checkout/{order_note}',[App\Http\Controllers\Frontend\CheckoutController::class,'orderCheckout']);
         Route::post('/post-review',[App\Http\Controllers\Frontend\ProductController::class,'postReview']);
 
     }
 );
+
+Route::controller(StripePaymentController::class)->group(function(){
+    Route::get('stripe', [App\Http\Controllers\StripePaymentController::class,'stripe']);
+    Route::post('stripe', [App\Http\Controllers\StripePaymentController::class,'stripePost'])->name('stripe.post');
+});
 
 /* FRONTEND ROUTES */
 Route::get('/',[App\Http\Controllers\Frontend\HomeController::class,'index'])->name('frontend.home');

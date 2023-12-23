@@ -16,7 +16,7 @@ class CheckoutController extends Controller
         return view('Frontend.checkout');
     }
 
-    public function orderCheckout(Request $request)
+    public function orderCheckout(Request $request, $order_note)
     {
         if(isset(auth()->user()->id))
         {
@@ -42,16 +42,10 @@ class CheckoutController extends Controller
                 OrderItems::create($order_item);
             }
 
-            $done_checkout = CartItems::where('users_id', auth()->user()->id)->delete();
+            $order_id = $result->id;
+            $order_amount = $order_total;
 
-            if($done_checkout)
-            {
-                return 1;
-            }
-            else
-            {
-                return 0;
-            }
+            return view('stripe', compact('order_id', 'order_amount'));
         }
     }
 }
