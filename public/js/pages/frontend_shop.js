@@ -12,11 +12,24 @@ $(".product-add-to-cart").on("click", function() {
             quantity: 1
         },
         success: function (data) {
-            console.log("item added to cart");
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Item added to cart",
+                showConfirmButton: false,
+                timer: 1500
+            });
             location.reload();
         },
         error: function (error) {
             console.error(error.reponseText);
+            Swal.fire({
+                position: "top-end",
+                icon: "error",
+                title: "Try Again",
+                showConfirmButton: false,
+                timer: 1500
+            });
         },
     });
 

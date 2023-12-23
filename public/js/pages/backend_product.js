@@ -98,13 +98,26 @@ $(document).ready(function () {
                 },
                 success: function (data) {
 
-                    console.log("category created successful");
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Product Created",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
                     location.reload();
 
 
                 },
                 error: function (error) {
                     console.error(error.reponseText);
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "error",
+                        title: "Try Again",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
                 },
             });
     });

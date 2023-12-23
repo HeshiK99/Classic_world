@@ -73,12 +73,25 @@ $(document).ready(function (){
                 },
                 success:function(data){
 
-                    console.log("brand created successful");
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Brand Created",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
                     location.reload();
 
                 },
                 error:function(error){
                     console.error(error.reponseText);
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "error",
+                        title: "Try Again",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
                 },
             });
     });
