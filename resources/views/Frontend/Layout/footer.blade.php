@@ -3,7 +3,7 @@
         <div class="footer-top">
             <div class="container">
 
-                <div class="pos_logo product_block_container">
+                <!-- <div class="pos_logo product_block_container">
                     <div class="logo-slider owl-carousel pos_content">
                         <div class="item-banklogo">
                             <a href="#">
@@ -46,7 +46,7 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="ft_newsletter">
                     <div id="block-newsletter-label">
@@ -73,23 +73,23 @@
                     <div class="col-sm-6 col-lg-3 links footer_block">
                         <h3>Contact Infor</h3>
                         <div class="footer-contact">
-                            <p class="address add">123 Main Street, Anytown, CA 12345 - USA.</p>
-                            <p class="phone add">(+1)866-550-3669</p>
-                            <p class="email add"><a href="#">yourmail@domain.com</a></p>
-                            <p class="time add">Working time: 9.00 -21.00</p>
+                            <!-- <p class="address add">123 Main Street, Anytown, CA 12345 - USA.</p> -->
+                            <p class="phone add">076 8722537</p>
+                            <p class="email add"><a href="#">heshikaushalya@gmail.com</a></p>
+                            <p class="time add">Working time: 9.00 a.m -21.00 p.m</p>
                         </div>
                         <div class="social_follow">
                             <ul>
                                 <li class="facebook"><a href="#" target="_blank">Facebook</a></li>
-                                <li class="twitter"><a href="#" target="_blank">Twitter</a></li>
+                                <!-- <li class="twitter"><a href="#" target="_blank">Twitter</a></li>
                                 <li class="youtube"><a href="#" target="_blank">YouTube</a></li>
-                                <li class="googleplus"><a href="#" target="_blank">Google +</a></li>
+                                <li class="googleplus"><a href="#" target="_blank">Google +</a></li> -->
                                 <li class="instagram"><a href="#" target="_blank">Instagram</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3 links footer_block">
-                        <h3 class="hidden-sm-down">Products</h3>
+                        <!-- <h3 class="hidden-sm-down">Products</h3>
                         <ul class="footer_list">
                             <li><a href="#">Prices drop</a></li>
                             <li><a href="#">New products</a></li>
@@ -97,20 +97,20 @@
                             <li><a href="#">Stores</a></li>
                             <li><a href="#">Login</a></li>
                             <li><a href="#">My account</a></li>
-                        </ul>
-                    </div>
+                        </ul> -->
+                    </div> 
                     <div class="col-sm-6 col-lg-3 links footer_block">
                         <h3 class="hidden-sm-down">Our company</h3>
                         <ul class="footer_list">
-                            <li><a href="#">Delivery</a></li>
-                            <li><a href="#">Legal Notice</a></li>
+                            <li><a href="#">Home</a></li> 
+                            <li><a href="#">Shop</a></li>
                             <li><a href="#">Terms and conditions of use</a></li>
                             <li><a href="#">About us</a></li>
-                            <li><a href="#">Secure payment</a></li>
+                            <li><a href="#">Login</a></li> 
                             <li><a href="#">Contact us</a></li>
                         </ul>
                     </div>
-                    <div class="col-sm-6 col-lg-3 links footer_block">
+                    <!-- <div class="col-sm-6 col-lg-3 links footer_block">
                         <h3 class="hidden-sm-down">Instagram</h3>
                         <div class="container">
                             <div class="row item-instagram">
@@ -127,8 +127,8 @@
                                 <div class="col-sm-4">
                                     <a href="#">
                                         <img src="assets/images/Instagram/3.webp" alt="harosa Instagram">
-                                    </a>
-                                </div>
+                                    </a> -->
+                                <!-- </div>
                                 <div class="col-sm-4">
                                     <a href="#">
                                         <img src="assets/images/Instagram/4.webp" alt="harosa Instagram">
@@ -136,8 +136,8 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <a href="#">
-                                        <img src="assets/images/Instagram/5.webp" alt="harosa Instagram">
-                                    </a>
+                                        <img src="assets/images/Instagram/5.webp" alt="harosa Instagram"> -->
+                                    <!-- </a>
                                 </div>
                                 <div class="col-sm-4">
                                     <a href="#">
@@ -146,7 +146,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

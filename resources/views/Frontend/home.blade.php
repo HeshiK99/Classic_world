@@ -2303,40 +2303,39 @@
     <div class="home_blog_post">
         <div class="container">
             <div class="page_title_area pos_title">
-                <h2><a href="#">Latest Blog Posts</a></h2>
-                <h3>You <span>Don’t Want</span> To Miss This</h3>
-                <p> Praesent volutpat ut nisl in hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et
-                    ultrices posuere cubilianulla</p>
+                
+                <h3>Hydrate <span>and</span> Glow</h3>
+                <p> Essential  Skin  Care  For  Everyday</p>
             </div>
             <div class="home_blog_post_inner">
                 <div class="blog_slider owl-carousel">
                     <!-- single blog item -->
                     <div class="item">
-                        <div class="blog_post">
+                         <div class="blog_post">
                             <div class="post_thumbnail">
                                 <a href="single-blog.html" class="img_content">
                                     <img src="assets/images/blog/1.webp" alt="">
                                 </a>
-                                <a href="single-blog-html.html" class="read-more">Read More</a>
-                            </div>
+                                <!-- <a href="single-blog-html.html" class="read-more">Read More</a> -->
+                            </div> 
                             <div class="post_content">
-                                <div class="date_time">
+                                <!-- <div class="date_time">
                                     <span class="moth_time">April</span>
                                     <span class="day_time">01</span>
-                                </div>
+                                </div>  -->
                                 <div class="content-inner">
-                                    <h4 class="post_title">This is Secound Post For XipBlog</h4>
+                                    <h4 class="post_title" style="font-size: 20px ; text-align:center;">NATURAL</h4>
                                     <div class="post_meta">
-                                        <span class="meta_date">
+                                        <!-- <span class="meta_date">
                                             <i class="fa fa-calendar"></i>
                                             Apr 01, 2018
                                         </span> / <span class="meta_author">
                                             <i class="fa fa-user"></i>
                                             Demo Posthemes
-                                        </span>
+                                        </span> -->
                                     </div>
                                 </div>
-                            </div>
+                            </div> 
                         </div>
                     </div>
                     <!-- single blog item end -->
@@ -2347,23 +2346,23 @@
                                 <a href="single-blog.html" class="img_content">
                                     <img src="assets/images/blog/2.webp" alt="">
                                 </a>
-                                <a href="single-blog-html.html" class="read-more">Read More</a>
+                                
                             </div>
                             <div class="post_content">
-                                <div class="date_time">
+                                <!-- <div class="date_time">
                                     <span class="moth_time">April</span>
                                     <span class="day_time">01</span>
-                                </div>
+                                </div> -->
                                 <div class="content-inner">
-                                    <h4 class="post_title">This is Secound Post For XipBlog</h4>
+                                    <h4 class="post_title"style="font-size: 20px ; text-align:center;" >ORGANIC</h4>
                                     <div class="post_meta">
-                                        <span class="meta_date">
+                                        <!-- <span class="meta_date">
                                             <i class="fa fa-calendar"></i>
                                             Apr 01, 2018
                                         </span> / <span class="meta_author">
                                             <i class="fa fa-user"></i>
                                             Demo Posthemes
-                                        </span>
+                                        </span> -->
                                     </div>
                                 </div>
                             </div>
@@ -2377,23 +2376,23 @@
                                 <a href="single-blog.html" class="img_content">
                                     <img src="assets/images/blog/3.webp" alt="">
                                 </a>
-                                <a href="single-blog-html.html" class="read-more">Read More</a>
+                                <!-- <a href="single-blog-html.html" class="read-more">Read More</a> -->
                             </div>
                             <div class="post_content">
-                                <div class="date_time">
+                                <!-- <div class="date_time">
                                     <span class="moth_time">April</span>
                                     <span class="day_time">01</span>
-                                </div>
+                                </div> -->
                                 <div class="content-inner">
-                                    <h4 class="post_title">This is Secound Post For XipBlog</h4>
+                                    <h4 class="post_title" style="font-size: 20px ; text-align:center;">LUXURY</h4>
                                     <div class="post_meta">
-                                        <span class="meta_date">
+                                        <!-- <span class="meta_date">
                                             <i class="fa fa-calendar"></i>
                                             Apr 01, 2018
                                         </span> / <span class="meta_author">
                                             <i class="fa fa-user"></i>
                                             Demo Posthemes
-                                        </span>
+                                        </span> -->
                                     </div>
                                 </div>
                             </div>
@@ -2403,19 +2402,19 @@
                     <!-- single blog item -->
                     <div class="item">
                         <div class="blog_post">
-                            <div class="post_thumbnail">
+                            <!-- <div class="post_thumbnail">
                                 <a href="single-blog.html" class="img_content">
                                     <img src="assets/images/blog/4.webp" alt="">
                                 </a>
                                 <a href="single-blog-html.html" class="read-more">Read More</a>
-                            </div>
+                            </div> -->
                             <div class="post_content">
-                                <div class="date_time">
+                                <!-- <div class="date_time">
                                     <span class="moth_time">April</span>
                                     <span class="day_time">01</span>
-                                </div>
+                                </div> -->
                                 <div class="content-inner">
-                                    <h4 class="post_title">This is Secound Post For XipBlog</h4>
+                                    <!-- <h4 class="post_title">This is Secound Post For XipBlog</h4>
                                     <div class="post_meta">
                                         <span class="meta_date">
                                             <i class="fa fa-calendar"></i>
@@ -2424,7 +2423,7 @@
                                             <i class="fa fa-user"></i>
                                             Demo Posthemes
                                         </span>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
