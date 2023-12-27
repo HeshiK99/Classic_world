@@ -129,4 +129,6 @@
     </div>
 </div>
 <!--  END CONTENT AREA  -->
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @stop

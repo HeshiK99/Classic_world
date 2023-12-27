@@ -137,6 +137,7 @@
     <!-- END GLOBAL MANDATORY SCRIPTS -->
     <!-- BEGIN PAGE LEVEL CUSTOM SCRIPTS -->
     <script src="{{asset('backend/plugins/table/datatable/datatables.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
     </body>
 
