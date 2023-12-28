@@ -1,5 +1,12 @@
 <footer id="footer">
-    <div class="footer-container">
+
+<div class="footer-container"></div>
+
+
+
+
+
+
         <div class="footer-top">
             <div class="container">
 
@@ -52,7 +59,7 @@
                     <div id="block-newsletter-label">
                         <div class="title-newsletter">
                             <h2>Newsletter sign up</h2>
-                            <p class="desc">(Get 30% OFF coupon today subscibers)</p>
+                            
                         </div>
                     </div>
                     <form action="#">
@@ -80,7 +87,7 @@
                         </div>
                         <div class="social_follow">
                             <ul>
-                                <li class="facebook"><a href="#" target="_blank">Facebook</a></li>
+                                <li class="facebook"><a href="https://www.facebook.com/profile.php?id=61554381300044&mibextid=LQQJ4d" target="_blank">Facebook</a></li>
                                 <!-- <li class="twitter"><a href="#" target="_blank">Twitter</a></li>
                                 <li class="youtube"><a href="#" target="_blank">YouTube</a></li>
                                 <li class="googleplus"><a href="#" target="_blank">Google +</a></li> -->
@@ -102,12 +109,11 @@
                     <div class="col-sm-6 col-lg-3 links footer_block">
                         <h3 class="hidden-sm-down">Our company</h3>
                         <ul class="footer_list">
-                            <li><a href="#">Home</a></li> 
-                            <li><a href="#">Shop</a></li>
-                            <li><a href="#">Terms and conditions of use</a></li>
-                            <li><a href="#">About us</a></li>
+                            <li><a href="{{route('frontend.home')}}">Home</a></li> 
+                            <li><a href="{{route('frontend.shop')}}">Shop</a></li>
+                            <li><a href="{{route('frontend.about-us')}}">About us</a></li>
                             <li><a href="#">Login</a></li> 
-                            <li><a href="#">Contact us</a></li>
+                            <li><a href="{{route('frontend.contact-us')}}">Contact us</a></li>
                         </ul>
                     </div>
                     <!-- <div class="col-sm-6 col-lg-3 links footer_block">

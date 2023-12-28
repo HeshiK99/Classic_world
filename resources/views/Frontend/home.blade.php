@@ -7,20 +7,20 @@
         <div class="row">
             <div class="slideshow_container col-md-8 col-sm-12 col-xs-12">
                 <!-- slider start -->
-                <div class="slider-inner">
+                <div class="slider-inner" style="opacity:5.2;">
                     <div id="mainSlider" class="nivoSlider nevo-slider">
-                        <img src="{{ asset('images/homeb/img2.webp') }}" alt="main slider" title="#htmlcaption1" />
-                        <img src="{{ asset('images/homeb/img4.png') }}" alt="main slider" title="#htmlcaption2" />
+                        <img src="assets/images/banner/2_6.jpg" alt="main slider" title="#htmlcaption1" />
+                        <img src="assets/images/banner/2_5.jpeg" alt="main slider" title="#htmlcaption2" style="opacity:5.2;"/>
                     </div>
                     <div id="htmlcaption1" class="nivo-html-caption slider-caption">
                         <div class="slider-progress"></div>
                         <div class="container">
                             <div class="slider-content slider-content-1 slider-animated-1">
-                                <h1 class="hone">Tan - <br>enhancer</h1>
-                                <p class="hp1">advanced pro formula</p>
-                                <div class="button-1 hover-btn-2">
+                                <h1 class="hone" style="font-size: 80px ; color:white; ">Classic <BR/> &nbsp; &nbsp; &nbsp;  World</h1>
+                                <!-- <p class="hp1">advanced pro formula</p> -->
+                                <!-- <div class="button-1 hover-btn-2">
                                     <a href="#">SHOP NOW</a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -28,11 +28,11 @@
                         <div class="slider-progress"></div>
                         <div class="container">
                             <div class="slider-content slider-content-2 slider-animated-2 pull-left">
-                                <h1 class="hone">The <br>Body Care</h1>
-                                <p class="hp1">Fruit Face Pack</p>
+                                <h1 class="hone" style="font-size: 60px ; color:brawn;">Discover Your Skin Care Journy Here</h1>
+                                <!-- <p class="hp1">Fruit Face Pack</p>
                                 <div class="button-1 hover-btn-2">
                                     <a href="#">SHOP NOW</a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -1224,12 +1224,12 @@
         <div class="row g-0">
             <div class="col-md-6">
                 <div class="banner-box m-0">
-                    <a href="shop.html"><img src="assets/images/banner/1_1.webp" alt="harosa"></a>
+                    <a href="shop.html"><img src="assets/images/banner/1_2.jpg" alt="harosa"></a>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="banner-box m-0">
-                    <a href="shop.html"><img src="assets/images/banner/2_1.webp" alt="harosa"></a>
+                    <a href="shop.html"><img src="assets/images/banner/1_9.webp" alt="harosa"></a>
                 </div>
             </div>
         </div>
@@ -1238,7 +1238,7 @@
 <!-- home banner end -->
 
 <!-- categori mini product area -->
-<div class="categori-mini-product-area">
+<!-- <div class="categori-mini-product-area">
     <div class="container">
         <div class="row">
 
@@ -1247,12 +1247,12 @@
                     <div class="pos_title">
                         <h2>featured</h2>
                     </div>
-                </div>
-                <div class=" pos_content row">
+                </div> -->
+                <!-- <div class=" pos_content row">
                     <div class="feature-item owl-carousel">
                         <div class="item-product">
-                            <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-mini product -->
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/1.webp" alt="">
@@ -1260,8 +1260,8 @@
                                     <div class="quick-view">
                                         <a href="#" class="quick_view">
                                             <i class="fa fa-search"></i>
-                                        </a>
-                                    </div>
+                                        </a> -->
+                                    <!-- </div>
                                     <div class="hook-reviews">
                                         <div class="comments_note">
                                             <i class="fa fa-star"></i>
@@ -1272,8 +1272,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="product_desc">
-                                    <div class="manufacturer">
+                                <div class="product_desc"> -->
+                                    <!-- <div class="manufacturer">
                                         <a href="#">Graphic Corner</a>
                                     </div>
                                     <h1><a href="single-product.html">Mountain fox - Vector graphics</a></h1>
@@ -1285,9 +1285,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- mini product end -->
-                            <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-mini product end -->
+                            
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/2.webp" alt="">
@@ -1320,9 +1320,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- mini product end -->
+                            <!mini product end -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/3.webp" alt="">
@@ -1331,8 +1331,8 @@
                                         <a href="#" class="quick_view">
                                             <i class="fa fa-search"></i>
                                         </a>
-                                    </div>
-                                    <div class="hook-reviews">
+                                    </div> -->
+                                    <!-- <div class="hook-reviews">
                                         <div class="comments_note">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -1340,8 +1340,8 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                         </div>
-                                    </div>
-                                </div>
+                                    </div> -->
+                                <!-- </div>
                                 <div class="product_desc">
                                     <div class="manufacturer">
                                         <a href="#">Graphic Corner</a>
@@ -1352,14 +1352,14 @@
                                     </div>
                                     <div class="cart">
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
-                                    </div>
-                                </div>
-                            </div>
+                                    </div> -->
+                                <!-- </div>
+                            </div> -->
                             <!-- mini product end -->
-                        </div>
-                        <div class="item-product">
+                        <!-- </div>
+                        <div class="item-product"> -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/4.webp" alt="">
@@ -1368,8 +1368,8 @@
                                         <a href="#" class="quick_view">
                                             <i class="fa fa-search"></i>
                                         </a>
-                                    </div>
-                                    <div class="hook-reviews">
+                                    </div> -->
+                                    <!-- <div class="hook-reviews">
                                         <div class="comments_note">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -1377,8 +1377,8 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                         </div>
-                                    </div>
-                                </div>
+                                    </div> -->
+                                <!-- </div>
                                 <div class="product_desc">
                                     <div class="manufacturer">
                                         <a href="#">Graphic Corner</a>
@@ -1386,24 +1386,24 @@
                                     <h1><a href="single-product.html">Mountain fox - Vector graphics</a></h1>
                                     <div class="product-price-and-shipping">
                                         <span class="price ">$9.00</span>
-                                    </div>
-                                    <div class="cart">
+                                    </div> -->
+                                    <!-- <div class="cart">
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- mini product end -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/5.webp" alt="">
-                                    </a>
-                                    <div class="quick-view">
+                                    </a> -->
+                                    <!-- <div class="quick-view">
                                         <a href="#" class="quick_view">
                                             <i class="fa fa-search"></i>
-                                        </a>
-                                    </div>
+                                        </a> -->
+                                    <!-- </div>
                                     <div class="hook-reviews">
                                         <div class="comments_note">
                                             <i class="fa fa-star"></i>
@@ -1411,8 +1411,8 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
-                                        </div>
-                                    </div>
+                                        </div> --> 
+                                    <!-- </div>
                                 </div>
                                 <div class="product_desc">
                                     <div class="manufacturer">
@@ -1425,11 +1425,11 @@
                                     <div class="cart">
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
                                     </div>
-                                </div>
-                            </div>
+                                </div> -->
+                            <!-- </div> -->
                             <!-- mini product end -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/6.webp" alt="">
@@ -1438,8 +1438,8 @@
                                         <a href="#" class="quick_view">
                                             <i class="fa fa-search"></i>
                                         </a>
-                                    </div>
-                                    <div class="hook-reviews">
+                                    </div> -->
+                                    <!-- <div class="hook-reviews">
                                         <div class="comments_note">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -1447,8 +1447,8 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                         </div>
-                                    </div>
-                                </div>
+                                    </div> -->
+                                <!-- </div>
                                 <div class="product_desc">
                                     <div class="manufacturer">
                                         <a href="#">Graphic Corner</a>
@@ -1460,13 +1460,13 @@
                                     <div class="cart">
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
                                     </div>
-                                </div>
-                            </div>
+                                </div> -->
+                            <!-- </div> -->
                             <!-- mini product end -->
-                        </div>
-                        <div class="item-product">
+                        <!-- </div>
+                        <div class="item-product"> -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/7.webp" alt="">
@@ -1477,8 +1477,8 @@
                                         </a>
                                     </div>
                                     <div class="hook-reviews">
-                                        <div class="comments_note">
-                                            <i class="fa fa-star"></i>
+                                        <div class="comments_note"> -->
+                                            <!-- <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -1489,8 +1489,8 @@
                                 <div class="product_desc">
                                     <div class="manufacturer">
                                         <a href="#">Graphic Corner</a>
-                                    </div>
-                                    <h1><a href="single-product.html">Mountain fox - Vector graphics</a></h1>
+                                    </div> -->
+                                    <!-- <h1><a href="single-product.html">Mountain fox - Vector graphics</a></h1>
                                     <div class="product-price-and-shipping">
                                         <span class="price ">$9.00</span>
                                     </div>
@@ -1498,10 +1498,10 @@
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- mini product end -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/8.webp" alt="">
@@ -1510,8 +1510,8 @@
                                         <a href="#" class="quick_view">
                                             <i class="fa fa-search"></i>
                                         </a>
-                                    </div>
-                                    <div class="hook-reviews">
+                                    </div> -->
+                                    <!-- <div class="hook-reviews">
                                         <div class="comments_note">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -1519,8 +1519,8 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                         </div>
-                                    </div>
-                                </div>
+                                    </div> -->
+                                <!-- </div>
                                 <div class="product_desc">
                                     <div class="manufacturer">
                                         <a href="#">Graphic Corner</a>
@@ -1532,11 +1532,11 @@
                                     <div class="cart">
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
                                     </div>
-                                </div>
-                            </div>
+                                </div> -->
+                            <!-- </div> -->
                             <!-- mini product end -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/9.webp" alt="">
@@ -1544,8 +1544,8 @@
                                     <div class="quick-view">
                                         <a href="#" class="quick_view">
                                             <i class="fa fa-search"></i>
-                                        </a>
-                                    </div>
+                                        </a> -->
+                                    <!-- </div>
                                     <div class="hook-reviews">
                                         <div class="comments_note">
                                             <i class="fa fa-star"></i>
@@ -1556,8 +1556,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="product_desc">
-                                    <div class="manufacturer">
+                                <div class="product_desc"> -->
+                                    <!-- <div class="manufacturer">
                                         <a href="#">Graphic Corner</a>
                                     </div>
                                     <h1><a href="single-product.html">Mountain fox - Vector graphics</a></h1>
@@ -1568,14 +1568,14 @@
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- mini product end -->
-                        </div>
+                        <!-- </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="col-lg-4">
+            <!-- <div class="col-lg-4">
                 <div class="pos-featured-products  product_block_container">
                     <div class="pos_title">
                         <h2>bestsellers</h2>
@@ -1584,17 +1584,17 @@
                 <div class=" pos_content row">
                     <div class="feature-item owl-carousel">
                         <div class="item-product">
-                            <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-mini product -->
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/4.webp" alt="">
                                     </a>
-                                    <div class="quick-view">
-                                        <a href="#" class="quick_view">
+                                    <div class="quick-view"> -->
+                                        <!-- <a href="#" class="quick_view">
                                             <i class="fa fa-search"></i>
                                         </a>
-                                    </div>
+                                    </div> 
                                     <div class="hook-reviews">
                                         <div class="comments_note">
                                             <i class="fa fa-star"></i>
@@ -1603,8 +1603,8 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                         </div>
-                                    </div>
-                                </div>
+                                    </div> -->
+                                <!-- </div>
                                 <div class="product_desc">
                                     <div class="manufacturer">
                                         <a href="#">Graphic Corner</a>
@@ -1617,10 +1617,10 @@
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- mini product end -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/5.webp" alt="">
@@ -1652,10 +1652,10 @@
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- mini product end -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/6.webp" alt="">
@@ -1672,8 +1672,8 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
-                                        </div>
-                                    </div>
+                                        </div> -->
+                                    <!-- </div>
                                 </div>
                                 <div class="product_desc">
                                     <div class="manufacturer">
@@ -1687,12 +1687,12 @@
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- mini product end -->
-                        </div>
-                        <div class="item-product">
+                        <!-- </div>
+                        <div class="item-product"> -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/1.webp" alt="">
@@ -1710,8 +1710,8 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                         </div>
-                                    </div>
-                                </div>
+                                    </div> -->
+                                <!-- </div>
                                 <div class="product_desc">
                                     <div class="manufacturer">
                                         <a href="#">Graphic Corner</a>
@@ -1724,10 +1724,10 @@
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- mini product end -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/2.webp" alt="">
@@ -1741,8 +1741,8 @@
                                         <div class="comments_note">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i> -->
+                                            <!-- <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                         </div>
                                     </div>
@@ -1759,10 +1759,10 @@
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- mini product end -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/3.webp" alt="">
@@ -1778,8 +1778,8 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
+                                            <!-<i class="fa fa-star"></i> -->
+                                        <!-- </div>
                                     </div>
                                 </div>
                                 <div class="product_desc">
@@ -1792,14 +1792,14 @@
                                     </div>
                                     <div class="cart">
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
-                                    </div>
-                                </div>
-                            </div>
+                                    </div> -->
+                                <!-- </div> 
+                            </div> -->
                             <!-- mini product end -->
-                        </div>
-                        <div class="item-product">
+                        <!-- </div>
+                        <div class="item-product"> -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/7.webp" alt="">
@@ -1814,8 +1814,8 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i> -->
+                                            <!-- <i class="fa fa-star"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -1828,13 +1828,13 @@
                                         <span class="price ">$9.00</span>
                                     </div>
                                     <div class="cart">
-                                        <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
-                                    </div>
+                                        <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div> -->
+                                    <!-- </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- mini product end -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/8.webp" alt="">
@@ -1864,12 +1864,12 @@
                                     </div>
                                     <div class="cart">
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
-                                    </div>
-                                </div>
-                            </div>
+                                    </div> -->
+                                <!-- </div>
+                            </div> -->
                             <!-- mini product end -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/9.webp" alt="">
@@ -1882,8 +1882,8 @@
                                     <div class="hook-reviews">
                                         <div class="comments_note">
                                             <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i> -->
+                                            <!-- <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                         </div>
@@ -1900,15 +1900,15 @@
                                     <div class="cart">
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
                                     </div>
-                                </div>
-                            </div>
+                                </div> -->
+                            <!-- </div> -->
                             <!-- mini product end -->
-                        </div>
+                        <!-- </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="col-lg-4">
+            <!-- <div class="col-lg-4">
                 <div class="pos-featured-products  product_block_container">
                     <div class="pos_title">
                         <h2>recommended</h2>
@@ -1916,9 +1916,9 @@
                 </div>
                 <div class=" pos_content row">
                     <div class="feature-item owl-carousel">
-                        <div class="item-product">
+                        <div class="item-product"> -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/7.webp" alt="">
@@ -1937,8 +1937,8 @@
                                             <i class="fa fa-star"></i>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="product_desc">
+                                </div> -->
+                                <!-- <div class="product_desc">
                                     <div class="manufacturer">
                                         <a href="#">Graphic Corner</a>
                                     </div>
@@ -1950,10 +1950,10 @@
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- mini product end -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/8.webp" alt="">
@@ -1973,8 +1973,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="product_desc">
-                                    <div class="manufacturer">
+                                <div class="product_desc"> -->
+                                    <!-- <div class="manufacturer">
                                         <a href="#">Graphic Corner</a>
                                     </div>
                                     <h1><a href="single-product.html">Mountain fox - Vector graphics</a></h1>
@@ -1985,10 +1985,10 @@
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- mini product end -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/9.webp" alt="">
@@ -2007,8 +2007,8 @@
                                             <i class="fa fa-star"></i>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="product_desc">
+                                </div> -->
+                                <!-- <div class="product_desc">
                                     <div class="manufacturer">
                                         <a href="#">Graphic Corner</a>
                                     </div>
@@ -2020,12 +2020,12 @@
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- mini product end -->
-                        </div>
-                        <div class="item-product">
+                        <!-- </div>
+                        <div class="item-product"> -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/1.webp" alt="">
@@ -2043,8 +2043,8 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                         </div>
-                                    </div>
-                                </div>
+                                    </div> -->
+                                <!-- </div>
                                 <div class="product_desc">
                                     <div class="manufacturer">
                                         <a href="#">Graphic Corner</a>
@@ -2057,10 +2057,10 @@
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- mini product end -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/2.webp" alt="">
@@ -2079,8 +2079,8 @@
                                             <i class="fa fa-star"></i>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="product_desc">
+                                </div> -->
+                                <!-- <div class="product_desc">
                                     <div class="manufacturer">
                                         <a href="#">Graphic Corner</a>
                                     </div>
@@ -2092,10 +2092,10 @@
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- mini product end -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/3.webp" alt="">
@@ -2104,8 +2104,8 @@
                                         <a href="#" class="quick_view">
                                             <i class="fa fa-search"></i>
                                         </a>
-                                    </div>
-                                    <div class="hook-reviews">
+                                    </div> -->
+                                    <!-- <div class="hook-reviews">
                                         <div class="comments_note">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -2122,17 +2122,17 @@
                                     <h1><a href="single-product.html">Mountain fox - Vector graphics</a></h1>
                                     <div class="product-price-and-shipping">
                                         <span class="price ">$9.00</span>
-                                    </div>
-                                    <div class="cart">
+                                    </div> -->
+                                    <!-- <div class="cart">
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- mini product end -->
-                        </div>
-                        <div class="item-product">
+                        <!-- </div>
+                        <div class="item-product"> -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/4.webp" alt="">
@@ -2148,8 +2148,8 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
+                                            <i class="fa fa-star"></i> -->
+                                        <!-- </div>
                                     </div>
                                 </div>
                                 <div class="product_desc">
@@ -2164,10 +2164,10 @@
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- mini product end -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/5.webp" alt="">
@@ -2185,8 +2185,8 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                         </div>
-                                    </div>
-                                </div>
+                                    </div> -->
+                                <!-- </div>
                                 <div class="product_desc">
                                     <div class="manufacturer">
                                         <a href="#">Graphic Corner</a>
@@ -2199,15 +2199,15 @@
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- mini product end -->
                             <!-- mini product -->
-                            <div class="product-miniature js-product-miniature">
+                            <!-- <div class="product-miniature js-product-miniature">
                                 <div class="img_block">
                                     <a href="#" class="thumbnail product-thumbnail">
                                         <img src="assets/images/product/mini/6.webp" alt="">
-                                    </a>
-                                    <div class="quick-view">
+                                    </a> -->
+                                    <!-- <div class="quick-view">
                                         <a href="#" class="quick_view">
                                             <i class="fa fa-search"></i>
                                         </a>
@@ -2221,8 +2221,8 @@
                                             <i class="fa fa-star"></i>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="product_desc">
+                                </div> -->
+                                <!-- <div class="product_desc">
                                     <div class="manufacturer">
                                         <a href="#">Graphic Corner</a>
                                     </div>
@@ -2233,17 +2233,17 @@
                                     <div class="cart">
                                         <div class="product-add-to-cart"><a href="cart.html">Add to cart</a></div>
                                     </div>
-                                </div>
-                            </div>
+                                </div> -->
+                            <!-- </div> -->
                             <!-- mini product end -->
-                        </div>
+                        <!-- </div>
                     </div>
                 </div>
             </div>
 
         </div>
     </div>
-</div>
+</div> -->
 <!-- categori mini product area end -->
 
 <!-- static product -->
@@ -2252,37 +2252,37 @@
         <div class="row">
             <div class="col-lg-4 col-md-6">
                 <div class="item-static">
-                    <div class="banner-box"><a href="#"> <img src="assets/images/product/3_1.webp" alt=""
+                    <div class="banner-box"><a href="#"> <img src="assets/images/product/1_2.webp" alt=""
                                 class="img-responsive"></a></div>
                     <div class="content-static">
-                        <div class="sale-static">Sale 30% off</div>
-                        <h2>NSI Balance Gel Body Builder NUDE</h2>
-                        <p>Praesent volutpat ut nisl in hendrerit. Vesti-bulum ante ipsum primis in faucibus</p>
-                        <a href="#">Shop Now</a>
+                        
+                        <h2> &nbsp;SKIN CLEAR <br/>MASK</h2>
+                        <p>Hydrate,Nourish and Improve Skin Tone</p>
+                        <a href="{{route('frontend.shop')}}">Shop Now</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="item-static">
-                    <div class="banner-box"><a href="#"> <img src="assets/images/product/4_1.webp" alt=""
+                    <div class="banner-box"><a href="#"> <img src="assets/images/product/1_3.webp" alt=""
                                 class="img-responsive"></a></div>
                     <div class="content-static">
-                        <div class="sale-static">Sale 50% off</div>
-                        <h2>Buy Nude by Bill Blass For Her EDC 100 ml</h2>
-                        <p>Praesent volutpat ut nisl in hendrerit. Vesti-bulum ante ipsum primis in faucibus</p>
-                        <a href="#">Shop Now</a>
+                        
+                        <h2>ORANGE VITAMIN C MASK </h2>
+                        <p>Helps Soothe , Nourish and Clear Skin</p>
+                        <a href="{{route('frontend.shop')}}">Shop Now</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="item-static">
-                    <div class="banner-box"><a href="#"> <img src="assets/images/product/5_1.webp" alt=""
+                    <div class="banner-box"><a href="#"> <img src="assets/images/product/1_1.webp" alt=""
                                 class="img-responsive"></a></div>
                     <div class="content-static">
-                        <div class="sale-static">Sale 20% off</div>
-                        <h2>PBM Cream Foundation Makeup</h2>
-                        <p>Praesent volutpat ut nisl in hendrerit. Vesti-bulum ante ipsum primis in faucibus</p>
-                        <a href="#">Shop Now</a>
+                        
+                        <h2>AVACADO VITAMIN E MASK</h2>
+                        <p>Helps soothe dryness,Refresh and Boost Skin</p>
+                        <a href="{{route('frontend.shop')}}">Shop Now</a>
                     </div>
                 </div>
             </div>
@@ -2294,7 +2294,7 @@
 <!-- home banner -->
 <div class="home-banner">
     <div class="banner-box">
-        <a href="#"> <img src="assets/images/banner/3_4.webp" alt="" class="img-responsive"></a>
+        <a href="#"> <img src="assets/images/banner/3_5.webp" alt="" class="img-responsive"></a>
     </div>
 </div>
 <!-- home banner end -->
