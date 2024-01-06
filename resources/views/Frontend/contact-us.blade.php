@@ -1,9 +1,10 @@
 @extends('Frontend.Layout.app')
 @section('content')
 <!-- top breadcrumb -->
-<div class="top_breadcrumb">
-    <div class="breadcrumb_container ">
-        <div class="container">
+<!-- top breadcrumb -->
+<div  class="top_breadcrumb">
+    <div class="breadcrumb_container">
+        <div  class="container">
             <nav data-depth="3" class="breadcrumb">
                 <ol>
                     <li>
@@ -18,31 +19,35 @@
                     </li>
                 </ol>
             </nav>
-        </div>
-    </div>
-</div>
+        
+    
+
 <!-- top breadcrumb end -->
 
 <!-- Contact page content -->
-<div class="contact-page-area">
+<!-- <div class="contact-page-area"> -->
 
-    <!-- contact page map -->
-    <div class="contact-page-map">
-        <!-- Google Map Start -->
-        <div class="container">
+    <!-- contact page map with banner image -->
+    <!-- <div class="contact-page-map" >
+        Google Map Start -->
+        <!-- <div class="container">
             <div id="map"></div>
-        </div>
+        </div> -->
         <!-- Google Map End -->
-    </div>
+    <!-- </div>  -->
+    <!-- contact page map with banner image end -->
+<!-- </div--></div></div></div>
+<!-- Contact page content end -->
+
     <!-- contact page map -->
 
     <!-- contact form area -->
-    <div class="contact-form-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="contact-form-inner">
-                        <h2>TELL US YOUR PROJECT</h2>
+    <div style="background-image: url('/assets/images/banner/95.jpg');"class="contact-form-area">
+        <div style="background-image: url('/assets/images/banner/95.jpg');" class="container">
+            <div style="background-image: url('/assets/images/banner/95.jpg');"class="row">
+                <div style="background-image: url('/assets/images/banner/95.jpg');"class="col-lg-6">
+                    <div style="background-image: url('/assets/images/banner/95.jpg');"class="contact-form-inner">
+                        <h2>TELL US YOUR REQUIREMENT</h2>
                         <form action="https://htmldemo.net/harosa/harosa-v2/mail.php" method="get">
                             <div class="row">
                                 <div class="col">
@@ -57,7 +62,7 @@
                                     <input type="text" class="form-control" placeholder="Email*" required>
                                 </div>
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="Subject*" required>
+                                    <input type="text" class="form-control" placeholder="Phone number*" required>
                                 </div>
                             </div>
                             <div class="row">
@@ -71,15 +76,15 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="contact-address-area">
+                <div style="background-image: url('/assets/images/banner/95.jpg');"class="col-lg-6">
+                    <div style="background-image: url('/assets/images/banner/95.jpg');"class="contact-address-area">
                         <h2>CONTACT US</h2>
-                        <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est
-                            notare quam littera gothica, quam nunc putamus parum claram anteposuerit litterarum formas human.</p>
+                        <p> We're delighted to connect with our valued skincare community. Whether you have inquiries about  products, or just want to share your skincare journey with us, we're here for you. Reach out through the provided channels, and our dedicated team of skincare enthusiasts will ensure you receive the support and information you need. 
+                            Your radiant skin journey starts with a conversation – let's talk!</p>
                         <ul>
-                            <li>
+                            <!-- <li>
                                 <i class="fa fa-fax">&nbsp;</i> Address : No 40 Baria Sreet 133/2 NewYork City
-                            </li>
+                            </li> -->
                             <li>
                                 <i class="fa fa-phone">&nbsp;</i> Info@roadthemes.com
                             </li>
@@ -91,7 +96,7 @@
                             <strong>Working hours</strong>
                         </h3>
                         <p>
-                            <strong>Monday – Saturday</strong>: &nbsp;08AM – 22PM
+                            <strong>Monday – Saturday</strong>: &nbsp;09AM – 21PM
                         </p>
                     </div>
                 </div>
@@ -103,69 +108,5 @@
 </div>
 <!-- Contact page content end -->
 
-<!-- footer start -->
-<footer id="footer">
-    <div class="footer-container">
-        <div class="footer-top">
-            <div class="container">
-                <div class="ft_newsletter">
-                    <div id="block-newsletter-label">
-                        <div class="title-newsletter">
-                            <h2>Newsletter sign up</h2>
-                            <p class="desc">(Get 30% OFF coupon today subscibers)</p>
-                        </div>
-                    </div>
-                    <form action="#">
-                        <input class="btn btn-primary float-xs-right hidden-xs-down" name="submitNewsletter" value="Subscribe" type="submit">
-                        <div class="input-wrapper">
-                            <input name="email" value="" placeholder="Your email address" aria-labelledby="block-newsletter-label" type="text">
-                        </div>
-                    </form>
-                </div>
-                <div class="pos_logo product_block_container">
-                    <div class="logo-slider owl-carousel pos_content">
-                        <div class="item-banklogo">
-                            <a href="#">
-                                <img src="assets/images/brand/1.webp" alt="harosa brand logo">
-                            </a>
-                        </div>
-                        <div class="item-banklogo">
-                            <a href="#">
-                                <img src="assets/images/brand/2.webp" alt="harosa brand logo">
-                            </a>
-                        </div>
-                        <div class="item-banklogo">
-                            <a href="#">
-                                <img src="assets/images/brand/3.webp" alt="harosa brand logo">
-                            </a>
-                        </div>
-                        <div class="item-banklogo">
-                            <a href="#">
-                                <img src="assets/images/brand/4.webp" alt="harosa brand logo">
-                            </a>
-                        </div>
-                        <div class="item-banklogo">
-                            <a href="#">
-                                <img src="assets/images/brand/5.webp" alt="harosa brand logo">
-                            </a>
-                        </div>
-                        <div class="item-banklogo">
-                            <a href="#">
-                                <img src="assets/images/brand/6.webp" alt="harosa brand logo">
-                            </a>
-                        </div>
-                        <div class="item-banklogo">
-                            <a href="#">
-                                <img src="assets/images/brand/1.webp" alt="harosa brand logo">
-                            </a>
-                        </div>
-                        <div class="item-banklogo">
-                            <a href="#">
-                                <img src="assets/images/brand/2.webp" alt="harosa brand logo">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         @stop

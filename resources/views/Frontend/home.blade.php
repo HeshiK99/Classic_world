@@ -7,10 +7,10 @@
         <div class="row">
             <div class="slideshow_container col-md-8 col-sm-12 col-xs-12">
                 <!-- slider start -->
-                <div class="slider-inner" style="opacity:5.2;">
+                <div class="slider-inner">
                     <div id="mainSlider" class="nivoSlider nevo-slider">
-                        <img src="assets/images/banner/2_6.jpg" alt="main slider" title="#htmlcaption1" />
-                        <img src="assets/images/banner/2_5.jpeg" alt="main slider" title="#htmlcaption2" style="opacity:5.2;"/>
+                        <img style="filter:blur(10px);"src="assets/images/banner/2_6.jpg" alt="main slider" title="#htmlcaption1" />
+                        <img style="filter:blur(5px);"src="assets/images/banner/2_5.jpeg" alt="main slider" title="#htmlcaption2" />
                     </div>
                     <div id="htmlcaption1" class="nivo-html-caption slider-caption">
                         <div class="slider-progress"></div>
@@ -40,11 +40,11 @@
                 <!-- slider end -->
             </div>
             <div class="banner_slide col-md-4">
-                <div class="banner-box">
+                <!-- <div class="banner-box">
                     <a href="shop.html"><img src="assets/images/banner/1_4.webp" alt=""></a>
-                </div>
+                </div> -->
                 <div class="banner-box">
-                    <a href="shop.html"><img src="assets/images/banner/2_4.webp" alt=""></a>
+                    <a href="shop.html"><img src="assets/images/banner/h6.jpg" alt=""></a>
                 </div>
             </div>
         </div>
@@ -2314,7 +2314,7 @@
                          <div class="blog_post">
                             <div class="post_thumbnail">
                                 <a href="single-blog.html" class="img_content">
-                                    <img src="assets/images/blog/1.webp" alt="">
+                                    <img src="assets/images/blog/11.jpeg" alt="">
                                 </a>
                                 <!-- <a href="single-blog-html.html" class="read-more">Read More</a> -->
                             </div> 
@@ -2344,7 +2344,7 @@
                         <div class="blog_post">
                             <div class="post_thumbnail">
                                 <a href="single-blog.html" class="img_content">
-                                    <img src="assets/images/blog/2.webp" alt="">
+                                    <img src="assets/images/blog/12.webp" alt="">
                                 </a>
                                 
                             </div>
@@ -2374,7 +2374,7 @@
                         <div class="blog_post">
                             <div class="post_thumbnail">
                                 <a href="single-blog.html" class="img_content">
-                                    <img src="assets/images/blog/3.webp" alt="">
+                                    <img src="assets/images/blog/13.jpeg" alt="">
                                 </a>
                                 <!-- <a href="single-blog-html.html" class="read-more">Read More</a> -->
                             </div>

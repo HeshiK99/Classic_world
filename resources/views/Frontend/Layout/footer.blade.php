@@ -1,16 +1,23 @@
 <footer id="footer">
 
-<div class="footer-container"></div>
+    <div class="footer-container"></div>
 
 
 
 
 
 
-        <div class="footer-top">
-            <div class="container">
 
-                <!-- <div class="pos_logo product_block_container">
+    <div class="footer-top">
+    </div>
+
+
+
+    <div class="container">
+
+
+
+        <!-- <div class="pos_logo product_block_container">
                     <div class="logo-slider owl-carousel pos_content">
                         <div class="item-banklogo">
                             <a href="#">
@@ -55,7 +62,7 @@
                     </div>
                 </div> -->
 
-                <div class="ft_newsletter">
+        <!-- <div class="ft_newsletter">
                     <div id="block-newsletter-label">
                         <div class="title-newsletter">
                             <h2>Newsletter sign up</h2>
@@ -68,35 +75,35 @@
                             <input name="email" value="" placeholder="Your email address" aria-labelledby="block-newsletter-label" type="text">
                         </div>
                     </form>
-                </div>
+                </div> -->
 
-            </div>
-        </div>
+    </div>
+    </div>        
 
-        <!-- footer main -->
-        <div class="footer-main">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-lg-3 links footer_block">
-                        <h3>Contact Infor</h3>
-                        <div class="footer-contact">
-                            <!-- <p class="address add">123 Main Street, Anytown, CA 12345 - USA.</p> -->
-                            <p class="phone add">076 8722537</p>
-                            <p class="email add"><a href="#">heshikaushalya@gmail.com</a></p>
-                            <p class="time add">Working time: 9.00 a.m -21.00 p.m</p>
-                        </div>
-                        <div class="social_follow">
-                            <ul>
-                                <li class="facebook"><a href="https://www.facebook.com/profile.php?id=61554381300044&mibextid=LQQJ4d" target="_blank">Facebook</a></li>
-                                <!-- <li class="twitter"><a href="#" target="_blank">Twitter</a></li>
-                                <li class="youtube"><a href="#" target="_blank">YouTube</a></li>
-                                <li class="googleplus"><a href="#" target="_blank">Google +</a></li> -->
-                                <li class="instagram"><a href="#" target="_blank">Instagram</a></li>
-                            </ul>
-                        </div>
+    <!-- footer main -->
+    <div class="footer-main" style="position: relative;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-lg-3 links footer_block">
+                    <h3>Contact Info</h3>
+                    <div class="footer-contact" >
+                        
+                        <p class="phone add">076 8722537</p>
+                        <p class="email add"><a href="mailto:heshikaushalya@gmail.com">heshikaushalya@gmail.com</a></p>
+                        <p class="time add">Working time: 9.00 a.m - 21.00 p.m</p>
                     </div>
-                    <div class="col-sm-6 col-lg-3 links footer_block">
-                        <!-- <h3 class="hidden-sm-down">Products</h3>
+                    <div class="social_follow">
+                        <ul>
+                            <li class="facebook"><a href="https://www.facebook.com/profile.php?id=61554381300044&mibextid=LQQJ4d" target="_blank">Facebook</a></li>
+                            <!-- <li class="twitter"><a href="#" target="_blank">Twitter</a></li>
+                        <li class="youtube"><a href="#" target="_blank">YouTube</a></li>
+                        <li class="googleplus"><a href="#" target="_blank">Google +</a></li> -->
+                            <li class="instagram"><a href="#" target="_blank">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 links footer_block">
+                    <!-- <h3 class="hidden-sm-down">Products</h3>
                         <ul class="footer_list">
                             <li><a href="#">Prices drop</a></li>
                             <li><a href="#">New products</a></li>
@@ -105,57 +112,24 @@
                             <li><a href="#">Login</a></li>
                             <li><a href="#">My account</a></li>
                         </ul> -->
-                    </div> 
-                    <div class="col-sm-6 col-lg-3 links footer_block">
-                        <h3 class="hidden-sm-down">Our company</h3>
-                        <ul class="footer_list">
-                            <li><a href="{{route('frontend.home')}}">Home</a></li> 
-                            <li><a href="{{route('frontend.shop')}}">Shop</a></li>
-                            <li><a href="{{route('frontend.about-us')}}">About us</a></li>
-                            <li><a href="#">Login</a></li> 
-                            <li><a href="{{route('frontend.contact-us')}}">Contact us</a></li>
-                        </ul>
-                    </div>
-                    <!-- <div class="col-sm-6 col-lg-3 links footer_block">
-                        <h3 class="hidden-sm-down">Instagram</h3>
-                        <div class="container">
-                            <div class="row item-instagram">
-                                <div class="col-sm-4">
-                                    <a href="#">
-                                        <img src="assets/images/Instagram/1.webp" alt="harosa Instagram">
-                                    </a>
-                                </div>
-                                <div class="col-sm-4">
-                                    <a href="#">
-                                        <img src="assets/images/Instagram/2.webp" alt="harosa Instagram">
-                                    </a>
-                                </div>
-                                <div class="col-sm-4">
-                                    <a href="#">
-                                        <img src="assets/images/Instagram/3.webp" alt="harosa Instagram">
-                                    </a> -->
-                                <!-- </div>
-                                <div class="col-sm-4">
-                                    <a href="#">
-                                        <img src="assets/images/Instagram/4.webp" alt="harosa Instagram">
-                                    </a>
-                                </div>
-                                <div class="col-sm-4">
-                                    <a href="#">
-                                        <img src="assets/images/Instagram/5.webp" alt="harosa Instagram"> -->
-                                    <!-- </a>
-                                </div>
-                                <div class="col-sm-4">
-                                    <a href="#">
-                                        <img src="assets/images/Instagram/6.webp" alt="harosa Instagram">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+                </div>
+                <div class="col-sm-6 col-lg-3 links footer_block">
+                    <h3 class="hidden-sm-down">Our company</h3>
+                    <ul class="footer_list">
+                        <li><a href="{{route('frontend.home')}}">Home</a></li>
+                        <li><a href="{{route('frontend.shop')}}">Shop</a></li>
+                        <li><a href="{{route('frontend.about-us')}}">About us</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="{{route('frontend.contact-us')}}">Contact us</a></li>
+                    </ul>
+                    <!-- Add other columns as needed -->
                 </div>
             </div>
+
+            <!-- Apply blur effect to the background image only -->
+            <div class="footer-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('/assets/images/banner/12.jpg'); background-size: cover; filter: blur(4px); z-index: -1;"></div>
         </div>
+
         <!-- footer main end -->
 
     </div>
