@@ -66,7 +66,7 @@
                                     <td><input type="text" id="brand-name" class="form-control" name="brandname"
                                             value="{{$single_brand->name}}"></td>
                                     <td><input type="date" id="createdate" class="form-control" name="createdate"
-                                            value="{{$single_brand->created_at}}"></td>
+                                            value="{{ ProductHelper::viewDateInput($single_brand->created_at) }}"></td>
                                     <td><select size="1" id="activestatus" class="form-control" name="activestatus">
                                             <option value="1" @if($single_brand->active == 1)selected="selected" @endif>
                                                 Active

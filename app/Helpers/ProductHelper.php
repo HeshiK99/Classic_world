@@ -49,4 +49,13 @@ class ProductHelper
         $formattedDate = $dateTime->format("F j, Y \a\\t g:i a");
         return $formattedDate;
     }
+
+    public static function viewDateInput($date = null)
+    {
+        $dateString = $date;
+        $dateTime = new DateTime($dateString);
+        $formattedDate = $dateTime->format('Y-m-d');
+
+        return $formattedDate;
+    }
 }

@@ -20,7 +20,7 @@
                             @csrf
                             <div class="row mb-4">
                                 <div class="col">
-                                    <select class="form-control basic" id="brand-id">
+                                    <select class="form-control basic" id="brand-id" name="brand_id">
                                         @foreach ($brands as $single_brand)
                                         <option value="{{$single_brand->id}}">{{$single_brand->name}}</option>
                                         @endforeach
@@ -35,7 +35,7 @@
                                 </div>
 
                             </div>
-                            <input type="submit" name="time" class="btn btn-primary">
+                            <input type="submit" class="btn btn-primary">
                         </form>
                     </div>
 
@@ -71,7 +71,7 @@
                                     <td><input type="text" id="category_name" class="form-control" name="category_name"
                                             value="{{$single_categories->name}}"></td>
                                     <td><input type="date" id="category_created" class="form-control"
-                                            name="category_created" value="{{$single_categories->created_at}}"></td>
+                                            name="category_created" value="{{ ProductHelper::viewDateInput($single_categories->created_at) }}"></td>
                                     <td><select size="1" id="category_status" class="form-control"
                                             name="category_status">
                                             <option value="1" @if($single_categories->active == 1)selected="selected"
@@ -84,27 +84,16 @@
                                             </option>
 
                                         </select></td>
-                                    </td>
-                                    <td>
-                                        <select size="1" id="category_brand" class="form-control" name="category_brand">
-                                            @foreach ($brands as $single_brand)
-                                            <option value="{{$single_brand->id}}" @if($single_brand->id ==
-                                                $single_categories->brand_id) selected="selected" @endif>
-                                                {{$single_brand->name}}
-                                            </option>
-                                            @endforeach
-                                        </select>
-                                    </td>
                                 </tr>
                                 @endforeach
-
                             </tbody>
                             <tfoot>
                                 <tr>
+                                    <th>ID</th>
                                     <th>Name</th>
-                                    <th>Age</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
+                                    <th>Created_Date</th>
+                                    <th>Active</th>
+                                    <th>Brand</th>
                                 </tr>
                             </tfoot>
                         </table>
@@ -115,34 +104,44 @@
 
     </div>
 
-    <!--  END CONTENT AREA  -->
+</div>
 
 
-    <!-- END MAIN CONTAINER -->
+</body>
 
-    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-    <script src="{{asset('backend/assets/js/libs/jquery-3.1.1.min.js')}}"></script>
-    <script src="{{asset('backend/bootstrap/js/popper.min.js')}}"></script>
-    <script src="{{asset('backend/bootstrap/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('backend/plugins/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
-    <script src="{{asset('backend/assets/js/app.js')}}"></script>
+<!-- Mirrored from designreset.com/cork/ltr/demo13/table_dt_live_dom_ordering.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Sep 2022 16:39:48 GMT -->
 
-    <script>
-    $(document).ready(function() {
-        App.init();
-    });
-    </script>
-    <script src="{{asset('backend/assets/js/custom.js')}}"></script>
-    <script src="{{asset('js/pages/backend_category.js')}}"></script>
-    <!-- END GLOBAL MANDATORY SCRIPTS -->
-    <!-- BEGIN PAGE LEVEL CUSTOM SCRIPTS -->
-    <script src="{{asset('backend/plugins/table/datatable/datatables.js')}}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    
-    </body>
+</html>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <!-- Mirrored from designreset.com/cork/ltr/demo13/table_dt_live_dom_ordering.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Sep 2022 16:39:48 GMT -->
+<script>
+    // Check if the session has a success message and show SweetAlert
+    @if(session()->has('success'))
+        Swal.fire({
+            position: "top-end",
+            icon: 'success',
+            title: 'Success!',
+            text: '{{ session()->get('success') }}',
+            showConfirmButton: false,
+            timer: 3000 // Set the timer for auto-close if needed
+        });
+    @elseif(session()->has('error'))
+        Swal.fire({
+            position: "top-end",
+            icon: 'error',
+            title: 'Error!',
+            text: '{{ session()->get('success') }}',
+            showConfirmButton: false,
+            timer: 3000 // Set the timer for auto-close if needed
+        });
+    @endif
+</script>
 
-    </html>
+</body>
+
+<!-- Mirrored from designreset.com/cork/ltr/demo13/table_dt_live_dom_ordering.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Sep 2022 16:39:48 GMT -->
+
+</html>
 </div>
 @stop

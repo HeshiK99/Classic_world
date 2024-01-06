@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Brands;
 use App\Models\Categories;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class CategoriesController extends Controller
 {
@@ -17,22 +18,27 @@ class CategoriesController extends Controller
     }
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'name'=> 'required|string|max:255',
-            'brand_id'=> 'required|int'
-        ]);
+        // $validatedData = $request->validate([
+        //     'name'=> 'required|string|max:255',
+        //     'brand_id'=> 'required|int'
+        // ]);
 
-        $categories['name'] = $request->name;
+        $categories['name'] = $request->categoryname;
         $categories['brand_id'] = $request->brand_id;
         $result = Categories::create($categories);
 
         if ($result)
         {
-            return 1;
+            Session::flash('success', 'Category added successful');
+        
+            // return view('Backend.categories', compact('categories','brands'));
+            return redirect()->back();
         }
         else
         {
-            return 0;
+            Session::flash('error', 'Something went wrong');
+        
+            return redirect()->back();
         }
     }
 }
