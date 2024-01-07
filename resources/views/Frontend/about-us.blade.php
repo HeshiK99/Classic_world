@@ -75,7 +75,7 @@ your skincare routine into a luxurious ritual."</p>
 
                     <!--  Single Funfact -->
                     <div class="col-lg-3 col-sm-6">
-                        <div style=" background-image:url('/assets/images/banner/39.jpg');" class="funfact" >
+                        <div style=" background-image:url('/assets/images/banner/ss.jpg');" class="funfact" >
                             <div class="fun__fact_img">
                                 <img  style="opacity: 0;"src="assets/images/icon-img/about-us-icon2.webp" alt="">
                             </div> 
@@ -107,7 +107,7 @@ your skincare routine into a luxurious ritual."</p>
 
                     <!--  Single Funfact -->
                     <div class="col-lg-3 col-sm-6">
-                        <div style=" background-image:url('/assets/images/banner/35.png');"class="funfact" >
+                        <div style=" background-image:url('/assets/images/banner/tt.png');"class="funfact" >
                             <div class="fun__fact_img">
                                 <img style="opacity: 0;"src="assets/images/icon-img/about-us-icon4.webp" alt="">
                             </div>
@@ -131,37 +131,37 @@ your skincare routine into a luxurious ritual."</p>
             <div class="row">
                 <div class="col-lg-6">
                     <div class="skrill_here">
-                        <h3>WE PROVIDE</h3>
+                        <h3 style="color: brown;">WE PROVIDE</h3>
                         <div class="ht-single-about">
                             <div class="skill-bar">
                                 <div class="skill-bar-item">
-                                    <span>Customer Support </span>
+                                    <span style="color: black;">Customer Support </span>
                                     <div class="progress">
-                                        <div class="progress-bar wow fadeInLeft width80" data-progress="100%" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                                        <div class="progress-bar wow fadeInLeft width100" data-progress="100%" data-wow-duration="1.5s" data-wow-delay="1.2s">
                                             <span class="text-top">100%</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="skill-bar-item">
-                                    <span>Sustainable Products</span>
+                                    <span style="color: black;">Sustainable Products</span>
                                     <div class="progress">
-                                        <div class="progress-bar wow fadeInLeft width90" data-progress="100%" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                                        <div class="progress-bar wow fadeInLeft width100" data-progress="100%" data-wow-duration="1.5s" data-wow-delay="1.2s">
                                             <span class="text-top">100%</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="skill-bar-item">
-                                    <span>  Refunds</span>
+                                    <span style="color: black;">  Refunds</span>
                                     <div class="progress">
-                                        <div class="progress-bar wow fadeInLeft width70" data-progress="100%" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                                        <div class="progress-bar wow fadeInLeft width100" data-progress="100%" data-wow-duration="1.5s" data-wow-delay="1.2s">
                                             <span class="text-top">100%</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="skill-bar-item">
-                                    <span>Quality</span>
+                                    <span style="color: black;">Quality Products</span>
                                     <div class="progress">
-                                        <div class="progress-bar wow fadeInLeft width95" data-progress="100%" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                                        <div class="progress-bar wow fadeInLeft width100" data-progress="100%" data-wow-duration="1.5s" data-wow-delay="1.2s">
                                             <span class="text-top">100%</span>
                                         </div>
                                     </div>

@@ -22,7 +22,7 @@
             <div class="col-lg-9 shop-content">
                 <div class="product-toolbar">
                     <div class="topbar-title">
-                        <h1>Arts & Crafts</h1>
+                        <h1>products & Categories</h1>
                     </div>
                     <div class="product-toolbar-inner">
                         <div class="product-view-mode">
@@ -35,15 +35,15 @@
                         <div class="woocommerce-ordering">
                             <form method="get" class="woocommerce-ordering hidden-xs">
                                 <div class="orderby-wrapper">
-                                    <label>Sort By :</label>
+                                    <!-- <label>Sort By :</label>
                                     <select class="nice-select-menu filter-dropdown orderby">
                                         <option value="/shop/filter/default" data-display="Select">Default sorting</option>
                                         <option value="/shop/filter/popularity">Sort by popularity</option>
-                                        <!-- <option value="/shop/filter/rating">Sort by average rating</option> -->
-                                        <option value="/shop/filter/newness">Sort by newness</option>
+                                        <option value="/shop/filter/rating">Sort by average rating</option> -->
+                                        <!-- <option value="/shop/filter/newness">Sort by newness</option>
                                         <option value="/shop/filter/lowtohigh">Sort by price: low to high</option>
                                         <option value="/shop/filter/hightolow">Sort by price: high to low</option>
-                                    </select>
+                                    </select>  -->
 
                                 </div>
                             </form>
@@ -175,7 +175,7 @@
             <div class="col-lg-3 sidebar-shop">
                 <div class="sidebar-product-categori">
                     <div class="shop-categori-title">
-                        <h3>Arts & Crafts</h3>
+                        <h3>Categories</h3>
                     </div>
                     <div class="product-filter mb-30">
                         <div class="widget-title">
@@ -236,9 +236,9 @@
                         </div>
                     </div> -->
                     <div class="advertising">
-                        <a href="shop.html"><img src="{{ asset('assets/images/banner/advertising.webp') }}" alt="harosa images"></a>
+                        <a href="shop.html"><img src="{{ asset('assets/images/banner/shop.jpeg') }}" alt="harosa images"></a>
                     </div>
-                    <div class="shop-categori-page categori-mini-product-area">
+                    <!-- <div class="shop-categori-page categori-mini-product-area">
                         <div class="pos-featured-products  product_block_container">
                             <div class="pos_title">
                                 <h2>New products</h2>
@@ -249,28 +249,28 @@
                                 <div class="item-product">
                                     @foreach(ProductHelper::newArrivals(3) as $new_arrivals)
                                     <!-- mini product -->
-                                    <div class="product-miniature js-product-miniature">
+                                    <!-- <div class="product-miniature js-product-miniature">
                                         <div class="img_block">
                                             <a href="#" class="thumbnail product-thumbnail">
                                                 <img src="{{ asset('storage/products/' . $new_arrivals->image) }}" alt="">
                                             </a>
                                         </div>
-                                        <div class="product_desc">
+                                        <div class="product_desc"> -->
                                             <!-- <div class="manufacturer">
                                                 <a href="#">Graphic Corner</a>
                                             </div> -->
-                                            <h1><a href="/product-detail/{{$new_arrivals->id}}">{{ $new_arrivals->name }}</a></h1>
+                                            <!-- <h1><a href="/product-detail/{{$new_arrivals->id}}">{{ $new_arrivals->name }}</a></h1>
                                             <div class="product-price-and-shipping">
                                                 <span class="price ">LKR {{ $new_arrivals->price }}</span>
                                             </div>
                                         </div>
-                                    </div>
-                                    @endforeach
+                                    </div> --> 
+                                    <!-- @endforeach -->
                                     <!-- mini product end -->
-                                </div>
-                                <div class="item-product">
+                                <!-- </div> -->
+                                <!-- <div class="item-product"> -->
                                     <!-- mini product -->
-                                    <div class="product-miniature js-product-miniature">
+                                    <!-- <div class="product-miniature js-product-miniature">
                                         <div class="img_block">
                                             <a href="#" class="thumbnail product-thumbnail">
                                                 <img src="assets/images/product/mini/4.webp" alt="">
@@ -285,10 +285,10 @@
                                                 <span class="price ">$9.00</span>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <!-- mini product end -->
                                     <!-- mini product -->
-                                    <div class="product-miniature js-product-miniature">
+                                    <!-- <div class="product-miniature js-product-miniature">
                                         <div class="img_block">
                                             <a href="#" class="thumbnail product-thumbnail">
                                                 <img src="assets/images/product/mini/5.webp" alt="">
@@ -303,10 +303,10 @@
                                                 <span class="price ">$9.00</span>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <!-- mini product end -->
                                     <!-- mini product -->
-                                    <div class="product-miniature js-product-miniature">
+                                    <!-- <div class="product-miniature js-product-miniature">
                                         <div class="img_block">
                                             <a href="#" class="thumbnail product-thumbnail">
                                                 <img src="assets/images/product/mini/6.webp" alt="">
@@ -321,12 +321,12 @@
                                                 <span class="price ">$9.00</span>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <!-- mini product end -->
-                                </div>
-                                <div class="item-product">
+                                <!-- </div> -->
+                                <!-- <div class="item-product"> -->
                                     <!-- mini product -->
-                                    <div class="product-miniature js-product-miniature">
+                                    <!-- <div class="product-miniature js-product-miniature">
                                         <div class="img_block">
                                             <a href="#" class="thumbnail product-thumbnail">
                                                 <img src="assets/images/product/mini/7.webp" alt="">
@@ -341,10 +341,10 @@
                                                 <span class="price ">$9.00</span>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <!-- mini product end -->
                                     <!-- mini product -->
-                                    <div class="product-miniature js-product-miniature">
+                                    <!-- <div class="product-miniature js-product-miniature">
                                         <div class="img_block">
                                             <a href="#" class="thumbnail product-thumbnail">
                                                 <img src="assets/images/product/mini/8.webp" alt="">
@@ -359,10 +359,10 @@
                                                 <span class="price ">$9.00</span>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <!-- mini product end -->
                                     <!-- mini product -->
-                                    <div class="product-miniature js-product-miniature">
+                                    <!-- <div class="product-miniature js-product-miniature">
                                         <div class="img_block">
                                             <a href="#" class="thumbnail product-thumbnail">
                                                 <img src="assets/images/product/mini/9.webp" alt="">
@@ -377,7 +377,7 @@
                                                 <span class="price ">$9.00</span>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <!-- mini product end -->
                                 </div>
                             </div>

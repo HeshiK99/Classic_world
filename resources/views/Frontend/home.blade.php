@@ -107,15 +107,14 @@
                 <h2>Our Products</h2>
             </div>
             <div class="pos_desc">
-                <p>Praesent volutpat ut nisl in hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et
-                    ultrices posuere cubilia Etiam porttitor, lacus in luctus molestie</p>
+                <p>Come and Choose the best Products suitable for your skin from us for a low price</p>
             </div>
         </div>
 
         <ul class="nav tabs_slider">
             <li><a href="#newarrival" data-bs-toggle="tab" class="active">New Arrival</a></li>
             <li><a href="#bestseller" data-bs-toggle="tab">Bestseller</a></li>
-            <li><a href="#featuredproducts" data-bs-toggle="tab">Featured Products</a></li>
+            <!-- <li><a href="#featuredproducts" data-bs-toggle="tab">Featured Products</a></li> -->
         </ul>
 
         <div class="tab-content pos_content">
@@ -692,10 +691,10 @@
                     <!-- single product end -->
                 </div>
             </div>
-            <div class="tab-pane fade" id="featuredproducts">
-                <div class="productTabContent0 owl-carousel">
+            <!-- <div class="tab-pane fade" id="featuredproducts"> -->
+                <!-- <div class="productTabContent0 owl-carousel"> -->
                     <!-- single product -->
-                    <div class="item-product">
+                    <!-- <div class="item-product">
                         <div class="product-miniature js-product-miniature">
                             <div class="img_block">
                                 <a href="single-product.html" class="thumbnail product-thumbnail">
@@ -716,8 +715,8 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
+                                    </div> -->
+                                <!-- </div>
                                 <div class="product-price-and-shipping_top">
                                     <span class="discount-percentage discount-product">-8%</span>
                                 </div>
@@ -741,8 +740,8 @@
                         </div>
                         <div class="product-miniature js-product-miniature">
                             <div class="img_block">
-                                <a href="single-product.html" class="thumbnail product-thumbnail">
-                                    <img src="assets/images/product/4.webp" alt="harosa product">
+                                <a href="single-product.html" class="thumbnail product-thumbnail"> -->
+                                    <!-- <img src="assets/images/product/4.webp" alt="harosa product">
                                 </a>
                                 <ul class="product-flag">
                                     <li class="new"><span>New</span></li>
@@ -761,8 +760,8 @@
                                         <i class="fa fa-star"></i>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="product_desc">
+                            </div> -->
+                            <!-- <div class="product_desc">
                                 <div class="manufacturer">
                                     <a href="shop.html">Studio Design</a>
                                 </div>
@@ -779,10 +778,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- single product end -->
                     <!-- single product -->
-                    <div class="item-product">
+                    <!-- <div class="item-product">
                         <div class="product-miniature js-product-miniature">
                             <div class="img_block">
                                 <a href="single-product.html" class="thumbnail product-thumbnail">
@@ -815,8 +814,8 @@
                                 <div class="product-price-and-shipping">
                                     <span class="regular-price">$23.90</span>
                                     <span class="price price-sale">$21.99</span>
-                                </div>
-                                <div class="cart">
+                                </div> -->
+                                <!-- <div class="cart">
                                     <div class="product-add-to-cart">
                                         <a href="cart.html">Add to cart</a>
                                     </div>
@@ -834,8 +833,8 @@
                                 <div class="quick-view">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#product_modal"
                                         data-original-title="Quick View" class="quick_view"><i
-                                            class="fa fa-search"></i></a>
-                                </div>
+                                            class="fa fa-search"></i></a> -->
+                                <!-- </div>
                                 <div class="hook-reviews">
                                     <div class="comments_note">
                                         <i class="fa fa-star"></i>
@@ -846,8 +845,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="product_desc">
-                                <div class="manufacturer">
+                            <div class="product_desc"> -->
+                                <!-- <div class="manufacturer">
                                     <a href="shop.html">Studio Design</a>
                                 </div>
                                 <h1> <a href="single-product.html" class="product_name"
@@ -863,10 +862,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- single product end -->
                     <!-- single product -->
-                    <div class="item-product">
+                    <!-- <div class="item-product">
                         <div class="product-miniature js-product-miniature">
                             <div class="img_block">
                                 <a href="single-product.html" class="thumbnail product-thumbnail">
@@ -878,8 +877,8 @@
                                 <div class="quick-view">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#product_modal"
                                         data-original-title="Quick View" class="quick_view"><i
-                                            class="fa fa-search"></i></a>
-                                </div>
+                                            class="fa fa-search"></i></a> -->
+                                <!-- </div>
                                 <div class="hook-reviews">
                                     <div class="comments_note">
                                         <i class="fa fa-star"></i>
@@ -903,8 +902,8 @@
                                 <div class="cart">
                                     <div class="product-add-to-cart">
                                         <a href="cart.html">Add to cart</a>
-                                    </div>
-                                </div>
+                                    </div> -->
+                                <!-- </div>
                             </div>
                         </div>
                         <div class="product-miniature js-product-miniature">
@@ -926,8 +925,8 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
+                                        <i class="fa fa-star"></i> -->
+                                    <!-- </div>
                                 </div>
                             </div>
                             <div class="product_desc">
@@ -947,10 +946,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- single product end -->
                     <!-- single product -->
-                    <div class="item-product">
+                    <!-- <div class="item-product">
                         <div class="product-miniature js-product-miniature">
                             <div class="img_block">
                                 <a href="single-product.html" class="thumbnail product-thumbnail">
@@ -980,8 +979,8 @@
                                 </div>
                                 <h1> <a href="single-product.html" class="product_name"
                                         title="Hummingbird printed t-shirt">Hummingbird printed t-shirt</a></h1>
-                                <div class="product-price-and-shipping">
-                                    <span class="regular-price">$23.90</span>
+                                <div class="product-price-and-shipping"> -->
+                                    <!-- <span class="regular-price">$23.90</span>
                                     <span class="price price-sale">$21.99</span>
                                 </div>
                                 <div class="cart">
@@ -1003,8 +1002,8 @@
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#product_modal"
                                         data-original-title="Quick View" class="quick_view"><i
                                             class="fa fa-search"></i></a>
-                                </div>
-                                <div class="hook-reviews">
+                                </div> -->
+                                <!-- <div class="hook-reviews">
                                     <div class="comments_note">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -1015,8 +1014,8 @@
                                 </div>
                                 <div class="product-price-and-shipping_top">
                                     <span class="discount-percentage discount-product">-8%</span>
-                                </div>
-                            </div>
+                                </div> -->
+                            <!-- </div>
                             <div class="product_desc">
                                 <div class="manufacturer">
                                     <a href="shop.html">Studio Design</a>
@@ -1034,10 +1033,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- single product end -->
                     <!-- single product -->
-                    <div class="item-product">
+                    <!-- <div class="item-product">
                         <div class="product-miniature js-product-miniature">
                             <div class="img_block">
                                 <a href="single-product.html" class="thumbnail product-thumbnail">
@@ -1121,11 +1120,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- single product end -->
                     <!-- single product -->
-                    <div class="item-product">
-                        <div class="product-miniature js-product-miniature">
+                    <!-- <div class="item-product"> -->
+                        <!-- <div class="product-miniature js-product-miniature">
                             <div class="img_block">
                                 <a href="single-product.html" class="thumbnail product-thumbnail">
                                     <img src="assets/images/product/10.webp" alt="harosa product">
@@ -1208,10 +1207,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- single product end -->
-                </div>
-            </div>
+                <!-- </div> -->
+            <!-- </div> -->
         </div>
 
     </div>
