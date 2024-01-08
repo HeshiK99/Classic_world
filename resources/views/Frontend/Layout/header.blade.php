@@ -16,16 +16,15 @@
                             Call us : <span>(076) 8722537</span>
                         </div>
                         <div class="info_box email">
-                            email : <a href="mailto:demo@example.com">demo@example.com</a>
+                            email : <a href="mailto:demo@example.com">classicworld95@gmail.com</a>
                         </div>
                     </div>
                     <div class="social_follow">
                         <ul>
-                            <li class="facebook"><a href="#"></a></li>
-                            <li class="twitter"><a href="#"></a></li>
-                            <li class="youtube"><a href="#"></a></li>
-                            <li class="googleplus"><a href="#"></a></li>
-                            <li class="instagram"><a href="#"></a></li>
+                            <li class="facebook"><a href="https://www.facebook.com/profile.php?id=61554381300044&mibextid=LQQJ4d"></a></li>
+                            <div></div>
+                            
+                            <li class="instagram"><a href="https://www.instagram.com/classicworld2024?igsh=OGQ5ZDc2ODk2ZA=="></a></li>
                         </ul>
                     </div>
                 </div>
@@ -91,14 +90,16 @@
                     </a>
                 </div>
 
-                <!--div class="ft_newsletter search_top">
+                <div class="ft_newsletter search_top">
                     <form action="#">
                         <input class="btn btn-primary float-xs-right hidden-xs-down" name="search" value="Search" type="submit">
                         <div class="input-wrapper">
                             <input name="email" value="" placeholder="Your email address" aria-labelledby="block-newsletter-label" type="text">
                         </div>
                     </form>
-                </div-->
+                </div>
+           
+
 
                 <div class="header-bottom-action">
 
@@ -404,4 +405,6 @@
 
     </div>
 </div>
+
+
 <!-- offcanvas END -->

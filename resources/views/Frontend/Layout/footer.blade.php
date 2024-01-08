@@ -98,11 +98,11 @@
                             <!-- <li class="twitter"><a href="#" target="_blank">Twitter</a></li>
                         <li class="youtube"><a href="#" target="_blank">YouTube</a></li>
                         <li class="googleplus"><a href="#" target="_blank">Google +</a></li> -->
-                            <li class="instagram"><a href="#" target="_blank">Instagram</a></li>
+                            <li class="instagram"><a href="https://www.instagram.com/classicworld2024?igsh=OGQ5ZDc2ODk2ZA==" target="_blank">Instagram</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-3 links footer_block">
+                <!-- <div class="col-sm-6 col-lg-3 links footer_block"> -->
                     <!-- <h3 class="hidden-sm-down">Products</h3>
                         <ul class="footer_list">
                             <li><a href="#">Prices drop</a></li>
@@ -112,14 +112,14 @@
                             <li><a href="#">Login</a></li>
                             <li><a href="#">My account</a></li>
                         </ul> -->
-                </div>
+                <!-- </div> -->
                 <div class="col-sm-6 col-lg-3 links footer_block">
                     <h3 class="hidden-sm-down">Our company</h3>
                     <ul class="footer_list">
                         <li><a href="{{route('frontend.home')}}">Home</a></li>
                         <li><a href="{{route('frontend.shop')}}">Shop</a></li>
                         <li><a href="{{route('frontend.about-us')}}">About us</a></li>
-                        <li><a href="#">Login</a></li>
+                        <li><a href="#login">Login</a></li>
                         <li><a href="{{route('frontend.contact-us')}}">Contact us</a></li>
                     </ul>
                     <!-- Add other columns as needed -->

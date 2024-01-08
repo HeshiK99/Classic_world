@@ -27,7 +27,7 @@
                         @endif --}}
 
                         <form role="form" action="{{ route('stripe.post') }}" method="post" class="require-validation"
-                            data-cc-on-file="false" data-stripe-publishable-key="pk_test_51OQViCH04THagBizi7YMlT16ECHrNA79PL3rvo0L7DbZevFPJOeOdTOaw7cyOTB75JJvyUcWsnIn7WeCSsMgBH4J0061rnik8O"
+                            data-cc-on-file="false" data-stripe-publishable-key="pk_test_51OWBeDH08lMGtiQmRbo6rwZGLXDUXeWVZhtKTuyC3A45Gq8elqo2hoZSGRV1H2SK3MdJKrjhuI7acL6bLRN8iaiF001DBvBb9y"
                             id="payment-form">
                             @csrf
 
