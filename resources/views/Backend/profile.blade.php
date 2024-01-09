@@ -72,8 +72,9 @@
 
                 <div class="skills layout-spacing ">
                     <form id="general-info" class="section general-info">
+                        @csrf
                         <div class="info">
-                            <h6 class="">General Information</h6>
+                            <h6 class="">Profile Information</h6>
                             <div class="row">
                                 <div class="col-lg-11 mx-auto">
                                     <div class="row">
@@ -118,7 +119,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <input type="submit" name="submit" class="btn btn-primary">
+                            <input type="submit" name="submit" class="btn btn-primary submit-profile">
                         </div>
                     </form>
                 </div>
@@ -131,4 +132,5 @@
 <!--  END CONTENT AREA  -->
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="{{asset('js/pages/backend_profile.js')}}"></script>
 @stop

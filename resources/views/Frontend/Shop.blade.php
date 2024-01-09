@@ -40,7 +40,7 @@
                                         <option value="/shop/filter/default" data-display="Select">Default sorting</option>
                                         <option value="/shop/filter/popularity">Sort by popularity</option>
                                         <option value="/shop/filter/rating">Sort by average rating</option> 
-                                        < <option value="/shop/filter/newness">Sort by newness</option>
+                                        <option value="/shop/filter/newness">Sort by newness</option>
                                         <option value="/shop/filter/lowtohigh">Sort by price: low to high</option>
                                         <option value="/shop/filter/hightolow">Sort by price: high to low</option>
                                     </select>  
