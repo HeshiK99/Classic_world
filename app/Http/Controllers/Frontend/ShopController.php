@@ -58,4 +58,11 @@ class ShopController extends Controller
 
         return view('Frontend.shop', compact('products'));
     }
+
+    public function searchProducts(Request $request)
+    {
+        $products = Product::where('active', 1)->where('deleted', 0)->where('name', 'like', '%' . $request->search . '%')->paginate(100);
+
+        return view('Frontend.shop', compact('products'));
+    }
 }

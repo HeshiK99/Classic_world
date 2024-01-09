@@ -41,6 +41,7 @@ Route::group(
         Route::post('/get-invoice-details',[App\Http\Controllers\OrderController::class,'getOrderDetails']);
         Route::get('/sales-reports',[App\Http\Controllers\SalesReportController::class,'index'])->name('sales-reports');
         Route::get('profile',[App\Http\Controllers\ProfileController::class,'index'])->name('profile');
+        Route::post('/update-profile',[App\Http\Controllers\ProfileController::class,'update']);
 
 
         
@@ -69,6 +70,8 @@ Route::get('/product-detail/{product_id}',[App\Http\Controllers\Frontend\Product
 
 
 Route::post('/update-route-session',[App\Http\Controllers\Frontend\SessionController::class,'routeUpdate']);
+
+Route::post('/search-products',[App\Http\Controllers\Frontend\ShopController::class,'searchProducts'])->name('frontend.search-products');
 
 Route::get('/about-us', function () {
     return view('Frontend.about-us');
