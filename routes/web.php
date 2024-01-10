@@ -43,7 +43,8 @@ Route::group(
         Route::get('profile',[App\Http\Controllers\ProfileController::class,'index'])->name('profile');
         Route::post('/update-profile',[App\Http\Controllers\ProfileController::class,'update']);
 
-
+        Route::get('/dashboard-dailysales',[App\Http\Controllers\Dashboardcontroller::class,'dailySales']);
+        Route::get('/dashboard-monthlysales',[App\Http\Controllers\Dashboardcontroller::class,'monthlySales']);
         
         Route::get('/cart',[App\Http\Controllers\Frontend\CartController::class,'index'])->name('frontend.cart');
         Route::post('/add-to-cart',[App\Http\Controllers\Frontend\CartController::class,'addToCart']);

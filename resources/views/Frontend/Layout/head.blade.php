@@ -1,14 +1,14 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Classic_World </title>
+    <title>Classic World </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{csrf_token()}}">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.webp">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/logo/img1.jpg')}}">
 
     <!-- CSS
 	============================================ -->

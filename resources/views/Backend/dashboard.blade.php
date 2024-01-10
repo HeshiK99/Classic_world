@@ -7,9 +7,9 @@
 
         <div class="page-header">
             <div class="page-title">
-                <h3>Sales Dashboard</h3>
+                <h3>Dashboard</h3>
             </div>
-            <div class="dropdown filter custom-dropdown-icon">
+            <!-- <div class="dropdown filter custom-dropdown-icon">
                 <a class="dropdown-toggle btn" href="#" role="button" id="filterDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="text"><span>Show</span> : Daily Sales</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg></a>
@@ -21,15 +21,19 @@
                     <a class="dropdown-item" data-value="Download All" href="javascript:void(0);">Download All</a>
                     <a class="dropdown-item" data-value="Share Statistics" href="javascript:void(0);">Share Statistics</a>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <div class="row layout-top-spacing">
 
-            <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
                 <div class="widget widget-chart-one">
                     <div class="widget-heading">
-                        <h5 class="">Revenue</h5>
+                        @if(auth()->user()->type == 'admin')
+                        <h5 class="">Revenue - LKR{{ DashboardHelper::getTotalOrderRevenue(auth()->user()->id, 'admin') }}</h5>
+                        @else
+                        <h5 class="">Payments - LKR{{ DashboardHelper::getTotalOrderRevenue(auth()->user()->id, 'customer') }}</h5>
+                        @endif
                         <ul class="tabs tab-pills">
                             <li><a href="javascript:void(0);" id="tb_1" class="tabmenu">Monthly</a></li>
                         </ul>
@@ -45,7 +49,7 @@
                 </div>
             </div>
 
-            <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+            <!-- <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
                 <div class="widget widget-chart-two">
                     <div class="widget-heading">
                         <h5 class="">Sales by Category</h5>
@@ -54,9 +58,10 @@
                         <div id="chart-2" class=""></div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 layout-spacing">
+            @if(auth()->user()->type == 'admin')
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 layout-spacing">
                 <div class="widget-two">
                     <div class="widget-content">
                         <div class="w-numeric-value">
@@ -78,7 +83,7 @@
                 </div>
             </div>
 
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 layout-spacing">
+            <!-- <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 layout-spacing">
                 <div class="widget-three">
                     <div class="widget-heading">
                         <h5 class="">Summary</h5>
@@ -164,9 +169,9 @@
 
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="col-xl-4 col-lg-12 col-md-6 col-sm-12 col-12 layout-spacing">
+            <div class="col-xl-6 col-lg-12 col-md-6 col-sm-12 col-12 layout-spacing">
                 <div class="widget-one">
                     <div class="widget-content">
                         <div class="w-numeric-value">
@@ -178,7 +183,7 @@
                                 </svg>
                             </div>
                             <div class="w-content">
-                                <span class="w-value">3,192</span>
+                                <span class="w-value">{{ DashboardHelper::getTotalOrders() }}</span>
                                 <span class="w-numeric-title">Total Orders</span>
                             </div>
                         </div>
@@ -188,115 +193,51 @@
                     </div>
                 </div>
             </div>
+            @endif
 
-            <div class="col-xl-5 col-lg-12 col-md-6 col-sm-12 col-12 layout-spacing">
+            @if(auth()->user()->type == 'customer')
+            <div class="col-xl-6 col-lg-12 col-md-6 col-sm-12 col-12 layout-spacing">
                 <div class="widget widget-table-one">
                     <div class="widget-heading">
                         <h5 class="">Transactions</h5>
                     </div>
 
                     <div class="widget-content">
+                        @foreach(DashboardHelper::getLatestOrders(auth()->user()->id, auth()->user()->type, 4) as $order)
                         <div class="transactions-list">
                             <div class="t-item">
                                 <div class="t-company-name">
                                     <div class="t-icon">
                                         <div class="icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign">
+                                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                        </svg>
                                                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                                                 <polyline points="9 22 9 12 15 12 15 22"></polyline>
                                             </svg>
                                         </div>
                                     </div>
                                     <div class="t-name">
-                                        <h4>Electricity Bill</h4>
-                                        <p class="meta-date">4 Aug 1:00PM</p>
+                                        <h4>Order ID: #{{ $order['id'] }}</h4>
+                                        <p class="meta-date">{{ ProductHelper::viewDateInput($order['created_at']) }}</p>
                                     </div>
 
                                 </div>
                                 <div class="t-rate rate-dec">
-                                    <p><span>-$16.44</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down">
+                                    <p><span>-LKR{{ $order['total'] }}</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down">
                                             <line x1="12" y1="5" x2="12" y2="19"></line>
                                             <polyline points="19 12 12 19 5 12"></polyline>
                                         </svg></p>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="transactions-list">
-                            <div class="t-item">
-                                <div class="t-company-name">
-                                    <div class="t-icon">
-                                        <div class="avatar avatar-xl">
-                                            <span class="avatar-title rounded-circle">SP</span>
-                                        </div>
-                                    </div>
-                                    <div class="t-name">
-                                        <h4>Shaun Park</h4>
-                                        <p class="meta-date">4 Aug 1:00PM</p>
-                                    </div>
-                                </div>
-                                <div class="t-rate rate-inc">
-                                    <p><span>+$66.44</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up">
-                                            <line x1="12" y1="19" x2="12" y2="5"></line>
-                                            <polyline points="5 12 12 5 19 12"></polyline>
-                                        </svg></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="transactions-list">
-                            <div class="t-item">
-                                <div class="t-company-name">
-                                    <div class="t-icon">
-                                        <div class="avatar avatar-xl">
-                                            <span class="avatar-title rounded-circle">AD</span>
-                                        </div>
-                                    </div>
-                                    <div class="t-name">
-                                        <h4>Amy Diaz</h4>
-                                        <p class="meta-date">4 Aug 1:00PM</p>
-                                    </div>
-
-                                </div>
-                                <div class="t-rate rate-inc">
-                                    <p><span>+$66.44</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up">
-                                            <line x1="12" y1="19" x2="12" y2="5"></line>
-                                            <polyline points="5 12 12 5 19 12"></polyline>
-                                        </svg></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="transactions-list">
-                            <div class="t-item">
-                                <div class="t-company-name">
-                                    <div class="t-icon">
-                                        <div class="icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
-                                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="t-name">
-                                        <h4>Netflix</h4>
-                                        <p class="meta-date">4 Aug 1:00PM</p>
-                                    </div>
-
-                                </div>
-                                <div class="t-rate rate-dec">
-                                    <p><span>-$32.00</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down">
-                                            <line x1="12" y1="5" x2="12" y2="19"></line>
-                                            <polyline points="19 12 12 19 5 12"></polyline>
-                                        </svg></p>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
 
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
+            <!-- <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
 
                 <div class="widget widget-activity-four">
 
@@ -429,9 +370,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
 
                 <div class="widget widget-account-invoice-one">
 
@@ -443,11 +384,11 @@
                         <div class="invoice-box">
 
                             <div class="acc-total-info">
-                                <h5>Balance</h5>
-                                <p class="acc-amount">$470</p>
+                                <h5>Total Expenses</h5>
+                                <p class="acc-amount">LKR {{ DashboardHelper::getTotalPayments(auth()->user()->id) }}</p>
                             </div>
 
-                            <div class="inv-detail">
+                            <!-- <div class="inv-detail">
                                 <div class="info-detail-1">
                                     <p>Monthly Plan</p>
                                     <p>$ 199.0</p>
@@ -470,17 +411,18 @@
                                         <p>$ -0.68</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
-                            <div class="inv-action">
+                            <!-- <div class="inv-action">
                                 <a href="#" class="btn btn-dark">Summary</a>
                                 <a href="#" class="btn btn-danger">Transfer</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
                 </div>
             </div>
+            @endif
 
             <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
                 <div class="widget widget-table-two">
@@ -498,139 +440,39 @@
                                             <div class="th-content">Customer</div>
                                         </th>
                                         <th>
-                                            <div class="th-content">Product</div>
-                                        </th>
-                                        <th>
-                                            <div class="th-content">Invoice</div>
+                                            <div class="th-content th-heading">Order</div>
                                         </th>
                                         <th>
                                             <div class="th-content th-heading">Price</div>
                                         </th>
                                         <th>
-                                            <div class="th-content">Status</div>
+                                            <div class="th-content th-heading">Date</div>
+                                        </th>
+                                        <th>
+                                            <div class="th-content th-heading">Status</div>
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach(DashboardHelper::getLatestOrders(auth()->user()->id, auth()->user()->type, 7) as $order)
                                     <tr>
                                         <td>
-                                            <div class="td-content customer-name"><img src="{{asset('backend/assets/img/profile-7.jpg')}}" alt="avatar">Andy King</div>
+                                            <div class="td-content customer-name"><img src="{{ asset('storage/users/' . $order['user_image']) }}" alt="avatar">{{ $order['user_name'] }}</div>
                                         </td>
                                         <td>
-                                            <div class="td-content product-brand">Nike Sport</div>
+                                            <div class="td-content product-brand">#{{ $order['id'] }}</div>
                                         </td>
                                         <td>
-                                            <div class="td-content">#76894</div>
+                                            <div class="td-content pricing">LKR {{ $order['total'] }}</div>
                                         </td>
                                         <td>
-                                            <div class="td-content pricing"><span class="">$88.00</span></div>
+                                            <div class="td-content">{{ ProductHelper::viewDateInput($order['created_at']) }}</div>
                                         </td>
                                         <td>
-                                            <div class="td-content"><span class="badge outline-badge-primary">Shipped</span></div>
+                                            <div class="td-content"><span class="badge outline-badge-success">PAID</span></div>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="td-content customer-name"><img src="{{asset('backend/assets/img/profile-4.jpg')}}" alt="avatar">Irene Collins</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content product-brand">Speakers</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content">#75844</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content pricing"><span class="">$84.00</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><span class="badge outline-badge-success">Paid</span></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="td-content customer-name"><img src="{{asset('backend/assets/img/profile-10.jpg')}}" alt="avatar">Laurie Fox</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content product-brand">Camera</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content">#66894</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content pricing"><span class="">$126.04</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><span class="badge outline-badge-danger">Pending</span></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="td-content customer-name"><img src="{{asset('backend/assets/img/profile-13.jpg')}}" alt="avatar">Luke Ivory</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content product-brand">Headphone</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content">#46894</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content pricing"><span class="">$56.07</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><span class="badge outline-badge-success">Paid</span></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="td-content customer-name"><img src="{{asset('backend/assets/img/profile-5.jpg')}}" alt="avatar">Ryan Collins</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content product-brand">Sport</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content">#89891</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content pricing"><span class="">$108.09</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><span class="badge outline-badge-primary">Shipped</span></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="td-content customer-name"><img src="{{asset('backend/assets/img/profile-6.jpg')}}" alt="avatar">Nia Hillyer</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content product-brand">Sunglasses</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content">#26974</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content pricing"><span class="">$168.09</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><span class="badge outline-badge-primary">Shipped</span></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="td-content customer-name"><img src="{{ asset('assets/img/profile-11.jpg') }}" alt="avatar">Sonia Shaw</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content product-brand">Watch</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content">#76844</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content pricing"><span class="">$110.00</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><span class="badge outline-badge-success">Paid</span></div>
-                                        </td>
-                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -657,136 +499,30 @@
                                             <div class="th-content th-heading">Price</div>
                                         </th>
                                         <th>
-                                            <div class="th-content th-heading">Discount</div>
+                                            <div class="th-content th-heading">QTY Remaining</div>
                                         </th>
                                         <th>
                                             <div class="th-content">Sold</div>
                                         </th>
-                                        <th>
-                                            <div class="th-content">Source</div>
-                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach(DashboardHelper::getBestSellingItems() as $items)
                                     <tr>
                                         <td>
-                                            <div class="td-content product-name"><img src="{{asset('backend/assets/img/speaker.jpg')}}" alt="product">Speakers</div>
+                                            <div class="td-content product-name"><img src="{{ asset('storage/products/' . $items->product_image) }}" alt="product">{{ $items->product_name }}</div>
                                         </td>
                                         <td>
-                                            <div class="td-content"><span class="pricing">$84.00</span></div>
+                                            <div class="td-content"><span class="pricing">LKR {{ $items->product_price }}</span></div>
                                         </td>
                                         <td>
-                                            <div class="td-content"><span class="discount-pricing">$10.00</span></div>
+                                            <div class="td-content"><span class="discount-pricing">{{ $items->product_quantity }}</span></div>
                                         </td>
                                         <td>
-                                            <div class="td-content">240</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><a href="javascript:void(0);" class="">Direct</a></div>
+                                            <div class="td-content">{{ $items->total_quantity_sold }}</div>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="td-content product-name"><img src="{{asset('backend/assets/img/sunglass.jpg')}}" alt="product">Sunglasses</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><span class="pricing">$56.07</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><span class="discount-pricing">$5.07</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content">190</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><a href="javascript:void(0);" class="">Google</a></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="td-content product-name"><img src="{{asset('backend/assets/img/watch.jpg')}}" alt="product">Watch</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><span class="pricing">$88.00</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><span class="discount-pricing">$20.00</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content">66</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><a href="javascript:void(0);" class="">Ads</a></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="td-content product-name"><img src="{{asset('backend/assets/img/laptop.jpg')}}" alt="product">Laptop</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><span class="pricing">$110.00</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><span class="discount-pricing">$33.00</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content">35</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><a href="javascript:void(0);" class="">Email</a></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="td-content product-name"><img src="{{asset('backend/assets/img/camera.jpg')}}" alt="product">Camera</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><span class="pricing">$126.04</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><span class="discount-pricing">$26.04</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content">30</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><a href="javascript:void(0);" class="">Referral</a></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="td-content product-name"><img src="{{asset('backend/assets/img/shoes.jpg')}}" alt="product">Shoes</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><span class="pricing">$108.09</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><span class="discount-pricing">$47.09</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content">130</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><a href="javascript:void(0);" class="">Google</a></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="td-content product-name"><img src="{{asset('backend/assets/img/headphones.jpg')}}" alt="product">Headphone</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><span class="pricing">$168.09</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><span class="discount-pricing">$60.09</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content">170</div>
-                                        </td>
-                                        <td>
-                                            <div class="td-content"><a href="javascript:void(0);" class="">Ads</a></div>
-                                        </td>
-                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
