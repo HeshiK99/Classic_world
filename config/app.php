@@ -212,6 +212,7 @@ return [
         'HeaderHelper' =>  App\Helpers\HeaderHelper::class,
         'ProductHelper' =>  App\Helpers\ProductHelper::class,
         'UserHelper' =>  App\Helpers\UserHelper::class,
+        'DashboardHelper' =>  App\Helpers\DashboardHelper::class,
     ],
 
 ];

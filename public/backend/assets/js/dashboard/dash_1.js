@@ -27,6 +27,41 @@ try {
         Daily Sales | Options
     =============================
 */
+var daily_sales_this_week = [];
+var daily_sales_last_week = [];
+
+$(document).ready(function() {
+
+  $.ajax({
+    url: '/dashboard-dailysales',
+    type: 'GET',
+    dataType: 'json',
+    success: function (data) {
+        console.log(data);
+
+        for (var key in data.thisWeekTotalAmounts) {
+          if (data.thisWeekTotalAmounts.hasOwnProperty(key)) {
+            daily_sales_this_week.push(parseFloat(data.thisWeekTotalAmounts[key]));
+          }
+        }
+
+        for (var key in data.lastWeekTotalAmounts) {
+          if (data.lastWeekTotalAmounts.hasOwnProperty(key)) {
+            daily_sales_last_week.push(parseFloat(data.lastWeekTotalAmounts[key]));
+          }
+        }
+
+        var d_2C_1 = new ApexCharts(document.querySelector("#daily-sales"), d_2options1);
+        d_2C_1.render();
+        
+        // You can further process or display the data as needed
+    },
+    error: function (error) {
+        console.log('Error:', error);
+    }
+  });
+});
+
 var d_2options1 = {
   chart: {
         height: 160,
@@ -57,16 +92,16 @@ var d_2options1 = {
     }],
     series: [{
         name: 'Sales',
-        data: [44, 55, 41, 67, 22, 43, 21]
+        data: daily_sales_this_week
     },{
         name: 'Last Week',
-        data: [13, 23, 20, 8, 13, 27, 33]
+        data: daily_sales_last_week
     }],
     xaxis: {
         labels: {
             show: false,
         },
-        categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'],
+        categories: ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'],
     },
     yaxis: {
         show: false
@@ -122,10 +157,12 @@ var d_2options2 = {
   fill: {
     opacity: 1,
   },
-  series: [{
-    name: 'Sales',
-    data: [28, 40, 36, 52, 38, 60, 38, 52, 36, 40]
-  }],
+  series: [
+      {
+      name: 'Sales',
+      data: [28, 40, 36, 52, 38, 60, 38, 52, 36, 40]
+    }
+  ],
   labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
   yaxis: {
     min: 0
@@ -163,6 +200,37 @@ var d_2options2 = {
         Revenue Monthly | Options
     =================================
 */
+
+var monthly_revenue = [];
+
+$(document).ready(function() {
+
+  $.ajax({
+    url: '/dashboard-monthlysales',
+    type: 'GET',
+    dataType: 'json',
+    success: function (data) {
+        console.log(data);
+
+        for (var key in data.monthly_result) {
+          if (data.monthly_result.hasOwnProperty(key)) {
+            monthly_revenue.push(parseFloat(data.monthly_result[key]));
+          }
+        }
+
+        var chart1 = new ApexCharts(
+            document.querySelector("#revenueMonthly"),
+            options1
+        );
+        
+        chart1.render();
+    },
+    error: function (error) {
+        console.log('Error:', error);
+    }
+  });
+});
+
 var options1 = {
   chart: {
     fontFamily: 'Nunito, sans-serif',
@@ -252,7 +320,7 @@ var options1 = {
     }
   },
   title: {
-    text: '$10,840',
+    text: '_____',
     align: 'left',
     margin: 0,
     offsetX: -10,
@@ -271,10 +339,7 @@ var options1 = {
   },
   series: [{
       name: 'Income',
-      data: [16800, 16800, 15500, 17800, 15500, 17000, 19000, 16000, 15000, 17000, 14000, 17000]
-  }, {
-      name: 'Expenses',
-      data: [16500, 17500, 16200, 17300, 16000, 19500, 16000, 17000, 16000, 19000, 18000, 19000]
+      data: monthly_revenue
   }],
   labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
   xaxis: {
@@ -500,8 +565,7 @@ var options = {
         Daily Sales | Render
     ============================
 */
-var d_2C_1 = new ApexCharts(document.querySelector("#daily-sales"), d_2options1);
-d_2C_1.render();
+
 
 /*
     ============================
@@ -516,12 +580,7 @@ d_2C_2.render();
         Revenue Monthly | Render
     ================================
 */
-var chart1 = new ApexCharts(
-    document.querySelector("#revenueMonthly"),
-    options1
-);
 
-chart1.render();
 
 /*
     =================================
