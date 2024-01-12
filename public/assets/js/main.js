@@ -469,11 +469,11 @@
         max: 700,
         values: [0, 700],
         slide: function(event, ui) {
-            $('.price-amount').val('$' + ui.values[0] + ' - $' + ui.values[1]);
+            $('.price-amount').val('LKR' + ui.values[0] + ' - LKR' + ui.values[1]);
         }
     });
-    $('.price-amount').val('$' + $('#price-range').slider('values', 0) +
-        ' - $' + $('#price-range').slider('values', 1));
+    $('.price-amount').val('LKR' + $('#price-range').slider('values', 0) +
+        ' - LKR' + $('#price-range').slider('values', 1));
     $('.product-filter-toggle').on('click', function() {
         $('.product-filter-wrapper').slideToggle();
     })

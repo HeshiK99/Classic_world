@@ -1,5 +1,13 @@
 @extends('Frontend.Layout.app')
 @section('content')
+
+<style>
+    .img-height {
+    height: 320px !important;
+    }
+</style>
+
+
 <!-- top breadcrumb -->
 <div class="top_breadcrumb">
     <div class="breadcrumb_container ">
@@ -62,7 +70,7 @@
                                             <a href="/product-detail/{{$product->id}}"
                                                 class="thumbnail product-thumbnail">
                                                 <img src="{{ asset('storage/products/' . $product->image) }}"
-                                                    alt="harosa product">
+                                                    alt="harosa product" class="img-height">
                                             </a>
                                             @if(ProductHelper::getDateDifference($product->created_at) == true)
                                             <ul class="product-flag">
@@ -114,7 +122,7 @@
                                             <a href="/product-detail/{{$product->id}}"
                                                 class="thumbnail product-thumbnail">
                                                 <img src="{{ asset('storage/products/' . $product->image) }}"
-                                                    alt="harosa product">
+                                                    alt="harosa product" class="img-height">
                                             </a>
                                             @if(ProductHelper::getDateDifference($product->created_at) == true)
                                             <ul class="product-flag">
