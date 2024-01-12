@@ -122,3 +122,123 @@ $(document).ready(function () {
             });
     });
 });
+
+$(document).ready(function () {
+
+    var changedArray = [];
+
+    // Listen for changes in the form elements within each row
+    $('#productTable').on('keyup change', 'input, select', function () {
+        // Get the closest <tr> parent
+        var row = $(this).closest('tr');
+        
+        // Build an array of changed values
+        var changedValues = {
+            'productid': row.find('#product_id').text(),
+            'categoryid': row.find('#category_id').val(),
+            'productname': row.find('#productname').val(),
+            'productprice': row.find('#productprice').val(),
+            'productquantity': row.find('#productquantity').val(),
+            'activestatus': row.find('#product_status').val()
+        };
+
+        // Check if the row is already in the changedArray
+        var existingIndex = changedArray.findIndex(function (item) {
+            return item.brandid === changedValues.brandid;
+        });
+
+        // If the row is not in the changedArray, add it; otherwise, update the existing entry
+        if (existingIndex === -1) {
+            changedArray.push(changedValues);
+        } else {
+            changedArray[existingIndex] = changedValues;
+        }
+
+        // Log the updated array of changed values to the console
+        console.log(changedArray);
+    });
+
+    $('.update-product').on("click", function() {
+
+        $.ajax (
+            {
+                url :'product-update',
+                method:'POST',
+                data:{
+                    _token:$('meta[name="csrf-token"]').attr('content'),
+                    changedArray: changedArray,
+                },
+                success:function(data){
+
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Brands Updated",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    location.reload();
+
+                },
+                error:function(error){
+                    console.error(error.reponseText);
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "error",
+                        title: "Try Again",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                },
+            });
+    });
+
+    $('.delete-product').on("click", function() {
+
+        var category_id = $(this).attr("data-id");
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax (
+                {
+                    url :'product-delete',
+                    method:'POST',
+                    data:{
+                        _token:$('meta[name="csrf-token"]').attr('content'),
+                        category_id: category_id,
+                    },
+                    success:function(data){
+        
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "success",
+                            title: "Product Deleted",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        location.reload();
+        
+                    },
+                    error:function(error){
+                        console.error(error.reponseText);
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "error",
+                            title: "Try Again",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    },
+                });
+            }
+        });
+    });
+});

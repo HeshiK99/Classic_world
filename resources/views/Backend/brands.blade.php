@@ -48,7 +48,7 @@
             <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
                 <div class="widget-content widget-content-area br-6">
                     <div class="table-responsive mt-4 mb-4">
-                        <table id="example" class="table table-hover" style="width:100%">
+                        <table id="brandTable" class="table table-hover" style="width:100%">
                             <thead>
 
                                 <tr>
@@ -65,7 +65,7 @@
                                     <td id="brandid" name="brandid">{{$single_brand->id}}</td>
                                     <td><input type="text" id="brand-name" class="form-control" name="brandname"
                                             value="{{$single_brand->name}}"></td>
-                                    <td><input type="date" id="createdate" class="form-control" name="createdate"
+                                    <td><input type="date" id="createdate" class="form-control" name="createdate" readonly
                                             value="{{ ProductHelper::viewDateInput($single_brand->created_at) }}"></td>
                                     <td><select size="1" id="activestatus" class="form-control" name="activestatus">
                                             <option value="1" @if($single_brand->active == 1)selected="selected" @endif>
@@ -76,6 +76,9 @@
                                             </option>
 
                                         </select></td>
+                                    <td style="text-align: center;">
+                                        <input type="submit" name="time" class="btn btn-danger delete-brand" data-id="{{$single_brand->id}}" value="Delete">
+                                    </td>
                                 </tr>
                                 @endforeach
 
@@ -90,6 +93,7 @@
                                 </tr>
                             </tfoot>
                         </table>
+                        <input type="submit" name="time" class="btn btn-primary update-brand" value="Update">
                     </div>
                 </div>
             </div>

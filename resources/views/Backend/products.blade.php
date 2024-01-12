@@ -85,7 +85,7 @@
             <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
                 <div class="widget-content widget-content-area br-6">
                     <div class="table-responsive mt-4 mb-4">
-                        <table id="example" class="table table-hover" style="width:100%">
+                        <table id="productTable" class="table table-hover" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>Categories</th>
@@ -97,7 +97,8 @@
                             <tbody>
                                 @foreach ($product as $single_product)
                                 <tr>
-                                    <td><select size="1" id="row-1-office" class="form-control" name="row-1-office">
+                                    <td id="product_id" name="product_id" class="d-none">{{$single_product->id}}</td>
+                                    <td><select size="1" id="category_id" class="form-control" name="category_id">
                                             @foreach ($categories as $single_category)
                                             <option value="{{$single_category->id}}" @if($single_product->category_id ==
                                                 $single_category->id) selected="selected" @endif>
@@ -112,8 +113,23 @@
                                             value="{{$single_product->name}}"></td>
                                     <td><input type="text" id="productprice" class="form-control" name="productprice"
                                             value="{{$single_product->price}}"></td>
-                                    <td><input type="text" id="productquantoty" class="form-control"
+                                    <td><input type="text" id="productquantity" class="form-control" readonly
                                             name="productquantity" value="{{$single_product->quantity}}"></td>
+                                    <td><select size="1" id="product_status" class="form-control"
+                                            name="product_status">
+                                            <option value="1" @if($single_product->active == 1)selected="selected"
+                                                @endif>
+                                                Active
+                                            </option>
+                                            <option value="0" @if($single_product->active == 0)selected="selected"
+                                                @endif>
+                                                Deactive
+                                            </option>
+
+                                    </select></td>
+                                    <td style="text-align: center;">
+                                        <input type="submit" name="time" class="btn btn-danger delete-product" data-id="{{$single_product->id}}" value="Delete">
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -126,6 +142,7 @@
                                 </tr>
                             </tfoot>
                         </table>
+                        <input type="submit" name="time" class="btn btn-primary update-product" value="Update">
                     </div>
                 </div>
             </div>

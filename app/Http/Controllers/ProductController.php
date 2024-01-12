@@ -51,6 +51,44 @@ class ProductController extends Controller
             return 0;
         }
     }
+
+    public function update(Request $request)
+    {
+        foreach($request->changedArray as $single_product)
+        {
+            $result = Product::where('id', $single_product['productid'])->update([
+                'category_id' => $single_product['categoryid'],
+                'name' => $single_product['productname'],
+                'price' => $single_product['productprice'],
+                'active' => $single_product['activestatus']
+            ]);
+        }
+
+        if ($result)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
+    public function delete(Request $request)
+    {
+        $result = Product::where('id', $request->category_id)->update([
+            'deleted' => 1
+        ]);
+
+        if ($result)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
+    }
 }
 
        

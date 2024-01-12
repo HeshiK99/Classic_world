@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Brands;
 use App\Models\Categories;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -39,6 +40,47 @@ class CategoriesController extends Controller
             Session::flash('error', 'Something went wrong');
         
             return redirect()->back();
+        }
+    }
+
+    public function update(Request $request)
+    {
+        foreach($request->changedArray as $single_category)
+        {
+            $result = Categories::where('id', $single_category['categoryid'])->update([
+                'name' => $single_category['categoryname'],
+                'active' => $single_category['activestatus'],
+                'brand_id' => $single_category['brandid'],
+            ]);
+        }
+
+        if ($result)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
+    public function delete(Request $request)
+    {
+        $result = Categories::where('id', $request->category_id)->update([
+            'deleted' => 1
+        ]);
+
+        Product::where('category_id', $request->category_id)->update([
+            'deleted' => 1
+        ]);
+
+        if ($result)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
         }
     }
 }
