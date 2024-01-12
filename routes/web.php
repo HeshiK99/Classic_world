@@ -31,10 +31,16 @@ Route::group(
 
         Route::get('brands',[App\Http\Controllers\BrandsController::class,'index'])->name('brands');
         Route::post('brands-store',[App\Http\Controllers\BrandsController::class,'store'])->name('brands.store');
+        Route::post('brands-update',[App\Http\Controllers\BrandsController::class,'update'])->name('brands.update');
+        Route::post('brand-delete',[App\Http\Controllers\BrandsController::class,'delete'])->name('brands.delete');
         Route::get('category',[App\Http\Controllers\CategoriesController::class,'index'])->name('categories');
         Route::post('categories-store',[App\Http\Controllers\CategoriesController::class,'store'])->name('categories.store');
+        Route::post('categories-update',[App\Http\Controllers\CategoriesController::class,'update'])->name('categories.update');
+        Route::post('category-delete',[App\Http\Controllers\CategoriesController::class,'delete'])->name('categories.delete');
         Route::get('product',[App\Http\Controllers\ProductController::class,'index'])->name('product');
         Route::post('product-store',[App\Http\Controllers\ProductController::class,'store'])->name('product.store');
+        Route::post('product-update',[App\Http\Controllers\ProductController::class,'update'])->name('product.update');
+        Route::post('product-delete',[App\Http\Controllers\ProductController::class,'delete'])->name('product.delete');
         Route::get('stock',[App\Http\Controllers\StockController::class,'index'])->name('stock');
         Route::post('stock-store',[App\Http\Controllers\StockController::class,'store'])->name('stock.store');
         Route::get('orders',[App\Http\Controllers\OrderController::class,'index'])->name('orders');

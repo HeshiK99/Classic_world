@@ -96,3 +96,121 @@ $(document).ready(function (){
             });
     });
 });
+
+$(document).ready(function () {
+
+    var changedArray = [];
+
+    // Listen for changes in the form elements within each row
+    $('#brandTable').on('keyup change', 'input, select', function () {
+        // Get the closest <tr> parent
+        var row = $(this).closest('tr');
+        
+        // Build an array of changed values
+        var changedValues = {
+            'brandid': row.find('#brandid').text(),
+            'brandname': row.find('#brand-name').val(),
+            'createdate': row.find('#createdate').val(),
+            'activestatus': row.find('#activestatus').val()
+        };
+
+        // Check if the row is already in the changedArray
+        var existingIndex = changedArray.findIndex(function (item) {
+            return item.brandid === changedValues.brandid;
+        });
+
+        // If the row is not in the changedArray, add it; otherwise, update the existing entry
+        if (existingIndex === -1) {
+            changedArray.push(changedValues);
+        } else {
+            changedArray[existingIndex] = changedValues;
+        }
+
+        // Log the updated array of changed values to the console
+        console.log(changedArray);
+    });
+
+    $('.update-brand').on("click", function() {
+
+        $.ajax (
+            {
+                url :'brands-update',
+                method:'POST',
+                data:{
+                    _token:$('meta[name="csrf-token"]').attr('content'),
+                    changedArray: changedArray,
+                },
+                success:function(data){
+
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Brands Updated",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    location.reload();
+
+                },
+                error:function(error){
+                    console.error(error.reponseText);
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "error",
+                        title: "Try Again",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                },
+            });
+    });
+
+    $('.delete-brand').on("click", function() {
+
+        var brand_id = $(this).attr("data-id");
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax (
+                {
+                    url :'brand-delete',
+                    method:'POST',
+                    data:{
+                        _token:$('meta[name="csrf-token"]').attr('content'),
+                        brand_id: brand_id,
+                    },
+                    success:function(data){
+        
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "success",
+                            title: "Brand Deleted",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        location.reload();
+        
+                    },
+                    error:function(error){
+                        console.error(error.reponseText);
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "error",
+                            title: "Try Again",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    },
+                });
+            }
+        });
+    });
+});
