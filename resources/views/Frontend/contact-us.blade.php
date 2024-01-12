@@ -86,10 +86,10 @@
                                 <i class="fa fa-fax">&nbsp;</i> Address : No 40 Baria Sreet 133/2 NewYork City
                             </li> -->
                             <li>
-                                <i class="fa fa-phone">&nbsp;</i> Info@roadthemes.com
+                                <i class="fa fa-phone">&nbsp;</i> heshikaushalya@gmail.com
                             </li>
                             <li>
-                                <i class="fa fa-envelope-o"></i>&nbsp;</i> 0(1234) 567 890
+                                <i class="fa fa-envelope-o"></i>&nbsp;</i> 076 8722537
                             </li>
                         </ul>
                         <h3>

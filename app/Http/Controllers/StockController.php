@@ -44,7 +44,7 @@ class StockController extends Controller
             ]);
         }
 
-        if($result && $result2)
+        if($result)
         {
             return 1;
         }
