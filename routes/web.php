@@ -83,6 +83,7 @@ Route::post('/search-products',[App\Http\Controllers\Frontend\ShopController::cl
 Route::get('/about-us', function () {
     return view('Frontend.about-us');
 })->name('frontend.about-us');
-Route::get('/contact-us', function () {
-    return view('Frontend.contact-us');
-})->name('frontend.contact-us');
+
+
+Route::get('/contact-us',[App\Http\Controllers\Frontend\ContactController::class,'index'])->name('frontend.contact-us');
+Route::post('/contact-email',[App\Http\Controllers\Frontend\ContactController::class,'sendEmail']);
