@@ -107,7 +107,7 @@
                     <form action="{{ route('frontend.search-products') }}" method="POST">
                         @csrf
                         <input class="btn btn-primary float-xs-right hidden-xs-down" name="search" value="Search"
-                            type="submit">
+                            type="submit" style="color: black !important; background: white !important;">
                         <div class="input-wrapper">
                             <input name="search" value="" placeholder="Search items..."
                                 aria-labelledby="block-newsletter-label" type="text">
