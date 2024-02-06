@@ -20,7 +20,7 @@ class CategoriesController extends Controller
     public function store(Request $request)
     {
         // $validatedData = $request->validate([
-        //     'name'=> 'required|string|max:255',
+        //     'name'=> 'required|string|max:255|unique:category,name',
         //     'brand_id'=> 'required|int'
         // ]);
 

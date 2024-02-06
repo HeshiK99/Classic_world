@@ -19,7 +19,7 @@ class BrandsController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'name'=> 'required|string|max:255'
+            'name'=> 'required|string|max:255|unique:brand,name'
         ]);
 
         $brand['name'] = $request->name;
