@@ -110,14 +110,27 @@ $(document).ready(function () {
 
                 },
                 error: function (error) {
-                    console.error(error.reponseText);
-                    Swal.fire({
-                        position: "top-end",
-                        icon: "error",
-                        title: "Try Again",
-                        showConfirmButton: false,
-                        timer: 1500
-                    });
+                    console.error(error);
+                    if(error.responseJSON.message == 'The name has already been taken.')
+                    {
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "error",
+                            title: error.responseJSON.message,
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    }
+                    else
+                    {
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "error",
+                            title: "Try again",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    }
                 },
             });
     });
