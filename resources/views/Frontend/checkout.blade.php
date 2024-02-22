@@ -90,13 +90,7 @@
                                         <label>Country <span class="required">*</span></label>
                                         <select>
                                             <option value="Sri Lanka" selected>Sri Lanka</option>
-                                            <!-- <option value="saab">Algeria</option>
-                                            <option value="mercedes">Afghanistan</option>
-                                            <option value="audi">Ghana</option>
-                                            <option value="audi2">Albania</option>
-                                            <option value="audi3">Bahrain</option>
-                                            <option value="audi4">Colombia</option>
-                                            <option value="audi5">Dominican Republic</option> -->
+                                           
                                         </select>
                                     </div>
                                 </div>
@@ -173,50 +167,7 @@
                             </div>
                             <div class="payment-method">
                                 <div class="payment-accordion">
-                                    <!-- <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingOne">
-                                                <h4 class="panel-title">
-                                                    <a role="button" data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                        Direct Bank Transfer
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                                <div class="panel-body">
-                                                    <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingTwo">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" role="button" data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                        Cheque Payment
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                                <div class="panel-body">
-                                                    <p>Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingThree">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" role="button" data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                        PayPal
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                                <div class="panel-body">
-                                                    <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
+                                    
                                     @if(HeaderHelper::getCartItemCount() != 0)
                                     <div class="order-button-payment">
                                         <input type="button" class="place-order" value="Place order">

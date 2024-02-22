@@ -24,17 +24,9 @@
                 <h1 class="h1 namne_details">{{ $product_details['name'] }}</h1>
                 <p class="called-route d-none">/product-detail/{{ $product_details['id'] }}</p>
                 <p class="product-id d-none">{{ $product_details['id'] }}</p>
-                <!-- <p class="reference">Reference: demo_1</p> -->
+                
                 <div id="product_comments_block_extra" class="no-print">
-                    <!-- <div class="hook-reviews">
-                        <div class="comments_note">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                    </div> -->
+                    
                     <ul class="comments_advices">
                         <li>
                             <a class="reviews _mPS2id-h show-reviews">Read reviews (<span>{{ count($reviews) }}</span>)</a>
@@ -47,13 +39,11 @@
                     </ul>
                 </div>
                 <div class="product-prices">
-                    <!-- <div class="product-discount">
-                        <span class="regular-price">$23.90</span>
-                    </div> -->
+                   
                     <div class="product-price h5 has-discount">
                         <div class="current-price">
                             <span>LKR {{ $product_details['price'] }}</span>
-                            <!-- <span class="discount discount-percentage">Save 8%</span> -->
+                            
                         </div>
                     </div>
                 </div>
@@ -109,9 +99,7 @@
                         </div>
                         <div class="comment-info">
                             <a href="#">{{ UserHelper::getUserData($single_review['user_id'], 'name') }}</a>
-                            <!-- <div class="reply">
-                                <a href="#">Reply</a>
-                            </div> -->
+                            
                             <span class="date">{{ ProductHelper::changeDateFormat($single_review['created_at']) }}</span>
                             <p>{{ $single_review['review'] }}</p>
                         </div>

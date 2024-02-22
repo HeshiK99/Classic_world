@@ -76,10 +76,7 @@
                         <br>
                         <table>
                             <tbody>
-                                <!-- <tr class="cart-subtotal">
-                                    <th>Subtotal</th>
-                                    <td><span class="amount">$215.00</span></td>
-                                </tr> -->
+                               
                                 <tr class="order-total">
                                     <th>Total</th>
                                     <td>

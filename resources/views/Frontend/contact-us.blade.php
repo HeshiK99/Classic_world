@@ -22,21 +22,7 @@
 
 
 
-            <!-- top breadcrumb end -->
-
-            <!-- Contact page content -->
-            <!-- <div class="contact-page-area"> -->
-
-            <!-- contact page map with banner image -->
-            <!-- <div class="contact-page-map" >
-        Google Map Start -->
-            <!-- <div class="container">
-            <div id="map"></div>
-        </div> -->
-            <!-- Google Map End -->
-            <!-- </div>  -->
-            <!-- contact page map with banner image end -->
-            <!-- </div-->
+            
         </div>
     </div>
 </div>
@@ -94,11 +80,9 @@
                         receive the support and information you need.
                         Your radiant skin journey starts with a conversation – let's talk!</p>
                     <ul>
-                        <!-- <li>
-                                <i class="fa fa-fax">&nbsp;</i> Address : No 40 Baria Sreet 133/2 NewYork City
-                            </li> -->
+                        
                         <li>
-                            <i class="fa fa-phone">&nbsp;</i> heshikaushalya@gmail.com
+                            <i class="fa fa-phone">&nbsp;</i> classicworld95@gmail.com
                         </li>
                         <li>
                             <i class="fa fa-envelope-o"></i>&nbsp;</i> 076 8722537

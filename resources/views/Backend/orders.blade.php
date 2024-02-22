@@ -111,48 +111,14 @@
                                                     </span> <span class="inv-number">[invoice number]</span></p>
                                                 <p class="inv-created-date"><span class="inv-title">Invoice Date :
                                                     </span> <span class="inv-date">20 Aug 2020</span></p>
-                                                <!-- <p class="inv-due-date"><span class="inv-title">Due Date : </span> <span
-                                                        class="inv-date">26 Aug 2020</span></p> -->
+                                                
                                             </div>
                                         </div>
 
                                         <div class="row inv--product-table-section">
                                             <div class="col-12">
                                                 <div class="table-responsive">
-                                                    <!-- <table class="table">
-                                                        <thead class="">
-                                                            <tr>
-                                                                <th scope="col">S.No</th>
-                                                                <th scope="col">Items</th>
-                                                                <th class="text-right" scope="col">Qty</th>
-                                                                <th class="text-right" scope="col">Unit Price</th>
-                                                                <th class="text-right" scope="col">Amount</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>1</td>
-                                                                <td>Electric Shaver</td>
-                                                                <td class="text-right">20</td>
-                                                                <td class="text-right">$300</td>
-                                                                <td class="text-right">$2800</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2</td>
-                                                                <td>Earphones</td>
-                                                                <td class="text-right">49</td>
-                                                                <td class="text-right">$500</td>
-                                                                <td class="text-right">$7000</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>3</td>
-                                                                <td>Wireless Router</td>
-                                                                <td class="text-right">30</td>
-                                                                <td class="text-right">$500</td>
-                                                                <td class="text-right">$3500</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table> -->
+                                                    
                                                 </div>
                                             </div>
                                         </div>

@@ -3,7 +3,7 @@
 
 <style>
     .img-height {
-    height: 320px !important;
+        height: 320px !important;
     }
 </style>
 
@@ -47,11 +47,11 @@
                                     <select class="nice-select-menu filter-dropdown orderby">
                                         <option value="/shop/filter/default" data-display="Select">Default sorting</option>
                                         <option value="/shop/filter/popularity">Sort by popularity</option>
-                                        <option value="/shop/filter/rating">Sort by average rating</option> 
+                                        <option value="/shop/filter/rating">Sort by average rating</option>
                                         <option value="/shop/filter/newness">Sort by newness</option>
                                         <option value="/shop/filter/lowtohigh">Sort by price: low to high</option>
                                         <option value="/shop/filter/hightolow">Sort by price: high to low</option>
-                                    </select>  
+                                    </select>
 
                                 </div>
                             </form>
@@ -67,10 +67,8 @@
                                 <div class="col-sm-6 col-md-6 col-lg-4">
                                     <div class="product-miniature js-product-miniature">
                                         <div class="img_block">
-                                            <a href="/product-detail/{{$product->id}}"
-                                                class="thumbnail product-thumbnail">
-                                                <img src="{{ asset('storage/products/' . $product->image) }}"
-                                                    alt="harosa product" class="img-height">
+                                            <a href="/product-detail/{{$product->id}}" class="thumbnail product-thumbnail">
+                                                <img src="{{ asset('storage/products/' . $product->image) }}" alt="harosa product" class="img-height">
                                             </a>
                                             @if(ProductHelper::getDateDifference($product->created_at) == true)
                                             <ul class="product-flag">
@@ -78,30 +76,19 @@
                                             </ul>
                                             @endif
                                             <div class="quick-view">
-                                                <a href="/product-detail/{{$product->id}}" data-bs-toggle="modal"
-                                                    data-bs-target="#product_modal" data-original-title="Quick View"
-                                                    class="quick_view"><i class="fa fa-search"></i></a>
+                                                <a href="/product-detail/{{$product->id}}" data-bs-toggle="modal" data-bs-target="#product_modal" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
                                             </div>
-                                            <!-- <div class="hook-reviews">
-                                                <div class="comments_note">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                            </div> -->
+
                                         </div>
                                         <div class="product_desc">
-                                            <h1> <a href="single-product.html" class="product_name"
-                                                    title="{{ $product->name }}">{{ $product->name }}</a></h1>
+                                            <h1> <a href="single-product.html" class="product_name" title="{{ $product->name }}">{{ $product->name }}</a></h1>
                                             <div class="product-price-and-shipping">
-                                                <!-- <span class="regular-price">$23.90</span> -->
+
                                                 <span class="price price-sale">LKR {{ $product->price }}</span>
                                             </div>
                                             <div class="cart">
                                                 <div class="product-add-to-cart" data-id="{{ $product->id }}">
-                                                    <a >Add to cart</a>
+                                                    <a>Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -119,10 +106,8 @@
                                 <div class="col-md-12">
                                     <div class="product-miniature js-product-miniature">
                                         <div class="img_block">
-                                            <a href="/product-detail/{{$product->id}}"
-                                                class="thumbnail product-thumbnail">
-                                                <img src="{{ asset('storage/products/' . $product->image) }}"
-                                                    alt="harosa product" class="img-height">
+                                            <a href="/product-detail/{{$product->id}}" class="thumbnail product-thumbnail">
+                                                <img src="{{ asset('storage/products/' . $product->image) }}" alt="harosa product" class="img-height">
                                             </a>
                                             @if(ProductHelper::getDateDifference($product->created_at) == true)
                                             <ul class="product-flag">
@@ -130,34 +115,24 @@
                                             </ul>
                                             @endif
                                             <div class="quick-view">
-                                                <a href="/product-detail/{{$product->id}}" data-original-title="Quick View"
-                                                    class="quick_view"><i class="fa fa-search"></i></a>
+                                                <a href="/product-detail/{{$product->id}}" data-original-title="Quick View" class="quick_view"><i class="fa fa-search"></i></a>
                                             </div>
-                                            <!-- <div class="hook-reviews">
-                                                <div class="comments_note">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                            </div> -->
+
                                         </div>
                                         <div class="product_desc">
-                                            <h1><a href="single-product.html" class="product_name"
-                                                    title="{{ $product->name }}">{{ $product->name }}</a>
+                                            <h1><a href="single-product.html" class="product_name" title="{{ $product->name }}">{{ $product->name }}</a>
                                             </h1>
                                             <div class="product-desc">
                                                 <p><span>Regular fit, round neckline, short sleeves. Made of extra long
                                                         staple pima cotton. </span></p>
                                             </div>
                                             <div class="product-price-and-shipping">
-                                                <!-- <span class="regular-price">$23.90</span> -->
+
                                                 <span class="price price-sale">LKR {{ $product->price }}</span>
                                             </div>
                                             <div class="cart">
                                                 <div class="product-add-to-cart" data-id="{{ $product->id }}">
-                                                    <a >Add to cart</a>
+                                                    <a>Add to cart</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -172,11 +147,7 @@
                 <nav class="woocommerce-pagination">
                     <ul class="page-numbers">
                         {!! $products->links() !!}
-                        <!-- <li><span aria-current="page" class="page-numbers current">1</span></li>
-                        <li><a class="page-numbers" href="#">2</a></li>
-                        <li><a class="page-numbers" href="#">3</a></li>
-                        <li><a class="page-numbers" href="#">4</a></li>
-                        <li><a class="next page-numbers" href="#">→</a></li> -->
+
                     </ul>
                 </nav>
             </div>
@@ -200,201 +171,19 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="facet">
-                        <h3>Color</h3>
-                        <div class="widget-content">
-                            <ul class="product-categories">
-                                <li class="cat-item">
-                                    <a href="#">Gold</a>
-                                    <span class="count">(6)</span>
-                                </li>
-                                <li class="cat-item">
-                                    <a href="#">Green</a>
-                                    <span class="count">(4)</span>
-                                </li>
-                                <li class="cat-item">
-                                    <a href="#">White</a>
-                                    <span class="count">(8)</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="facet">
-                        <h3>Size</h3>
-                        <div class="widget-content">
-                            <ul class="product-categories">
-                                <li class="cat-item">
-                                    <a href="#">S</a>
-                                    <span class="count">(3)</span>
-                                </li>
-                                <li class="cat-item">
-                                    <a href="#">M</a>
-                                    <span class="count">(5)</span>
-                                </li>
-                                <li class="cat-item">
-                                    <a href="#">L</a>
-                                    <span class="count">(2)</span>
-                                </li>
-                                <li class="cat-item">
-                                    <a href="#">XL</a>
-                                    <span class="count">(7)</span>
-                                </li>
 
-                            </ul>
-                        </div>
-                    </div> -->
                     <div class="advertising">
                         <a href="shop.html"><img src="{{ asset('assets/images/banner/shop.jpeg') }}" alt="harosa images"></a>
                     </div>
-                    <!-- <div class="shop-categori-page categori-mini-product-area">
-                        <div class="pos-featured-products  product_block_container">
-                            <div class="pos_title">
-                                <h2>New products</h2>
-                            </div>
-                        </div>
-                        <div class=" pos_content row">
-                            <div class="feature-item owl-carousel">
-                                <div class="item-product">
-                                    @foreach(ProductHelper::newArrivals(3) as $new_arrivals)
-                                    <!-- mini product -->
-                                    <!-- <div class="product-miniature js-product-miniature">
-                                        <div class="img_block">
-                                            <a href="#" class="thumbnail product-thumbnail">
-                                                <img src="{{ asset('storage/products/' . $new_arrivals->image) }}" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="product_desc"> -->
-                                            <!-- <div class="manufacturer">
-                                                <a href="#">Graphic Corner</a>
-                                            </div> -->
-                                            <!-- <h1><a href="/product-detail/{{$new_arrivals->id}}">{{ $new_arrivals->name }}</a></h1>
-                                            <div class="product-price-and-shipping">
-                                                <span class="price ">LKR {{ $new_arrivals->price }}</span>
-                                            </div>
-                                        </div>
-                                    </div> --> 
-                                    <!-- @endforeach -->
-                                    <!-- mini product end -->
-                                <!-- </div> -->
-                                <!-- <div class="item-product"> -->
-                                    <!-- mini product -->
-                                    <!-- <div class="product-miniature js-product-miniature">
-                                        <div class="img_block">
-                                            <a href="#" class="thumbnail product-thumbnail">
-                                                <img src="assets/images/product/mini/4.webp" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="product_desc">
-                                            <div class="manufacturer">
-                                                <a href="#">Graphic Corner</a>
-                                            </div>
-                                            <h1><a href="single-product.html">Mountain fox - Vector graphics</a></h1>
-                                            <div class="product-price-and-shipping">
-                                                <span class="price ">$9.00</span>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <!-- mini product end -->
-                                    <!-- mini product -->
-                                    <!-- <div class="product-miniature js-product-miniature">
-                                        <div class="img_block">
-                                            <a href="#" class="thumbnail product-thumbnail">
-                                                <img src="assets/images/product/mini/5.webp" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="product_desc">
-                                            <div class="manufacturer">
-                                                <a href="#">Graphic Corner</a>
-                                            </div>
-                                            <h1><a href="single-product.html">Mountain fox - Vector graphics</a></h1>
-                                            <div class="product-price-and-shipping">
-                                                <span class="price ">$9.00</span>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <!-- mini product end -->
-                                    <!-- mini product -->
-                                    <!-- <div class="product-miniature js-product-miniature">
-                                        <div class="img_block">
-                                            <a href="#" class="thumbnail product-thumbnail">
-                                                <img src="assets/images/product/mini/6.webp" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="product_desc">
-                                            <div class="manufacturer">
-                                                <a href="#">Graphic Corner</a>
-                                            </div>
-                                            <h1><a href="single-product.html">Mountain fox - Vector graphics</a></h1>
-                                            <div class="product-price-and-shipping">
-                                                <span class="price ">$9.00</span>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <!-- mini product end -->
-                                <!-- </div> -->
-                                <!-- <div class="item-product"> -->
-                                    <!-- mini product -->
-                                    <!-- <div class="product-miniature js-product-miniature">
-                                        <div class="img_block">
-                                            <a href="#" class="thumbnail product-thumbnail">
-                                                <img src="assets/images/product/mini/7.webp" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="product_desc">
-                                            <div class="manufacturer">
-                                                <a href="#">Graphic Corner</a>
-                                            </div>
-                                            <h1><a href="single-product.html">Mountain fox - Vector graphics</a></h1>
-                                            <div class="product-price-and-shipping">
-                                                <span class="price ">$9.00</span>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <!-- mini product end -->
-                                    <!-- mini product -->
-                                    <!-- <div class="product-miniature js-product-miniature">
-                                        <div class="img_block">
-                                            <a href="#" class="thumbnail product-thumbnail">
-                                                <img src="assets/images/product/mini/8.webp" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="product_desc">
-                                            <div class="manufacturer">
-                                                <a href="#">Graphic Corner</a>
-                                            </div>
-                                            <h1><a href="single-product.html">Mountain fox - Vector graphics</a></h1>
-                                            <div class="product-price-and-shipping">
-                                                <span class="price ">$9.00</span>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <!-- mini product end -->
-                                    <!-- mini product -->
-                                    <!-- <div class="product-miniature js-product-miniature">
-                                        <div class="img_block">
-                                            <a href="#" class="thumbnail product-thumbnail">
-                                                <img src="assets/images/product/mini/9.webp" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="product_desc">
-                                            <div class="manufacturer">
-                                                <a href="#">Graphic Corner</a>
-                                            </div>
-                                            <h1><a href="single-product.html">Mountain fox - Vector graphics</a></h1>
-                                            <div class="product-price-and-shipping">
-                                                <span class="price ">$9.00</span>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <!-- mini product end -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
     </div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <!-- Shop page wraper end -->
 
